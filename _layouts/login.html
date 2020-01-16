@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  {% include head.html %}
+  <body class="pf-m-redhat-font">
+    <div class="pf-c-login">
+      <div class="pf-c-login__container">
+        <header class="pf-c-login__header">
+          {% if page.collection == 'okd' %}
+            {%- include logo-okd.html %}
+          {% else %}
+            {%- include logo-ocp.html %}
+          {% endif %}
+        </header>
+        <main class="pf-c-login__main">
+          <div class="pf-c-login__main-body">
+            {% raw %}<form class="pf-c-form" role="form" action="{{ .Action }}" method="POST">
+              <input type="hidden" name="{{ .Names.Then }}" value="{{ .Values.Then }}">
+              <input type="hidden" name="{{ .Names.CSRF }}" value="{{ .Values.CSRF }}">
+              {{ if .Error }}
+              <p class="pf-c-form__helper-text pf-m-error">
+                <svg style="vertical-align:-0.125em" fill="currentColor" height="1em" width="1em" viewBox="0 0 512 512" aria-hidden="true" role="img" class="pf-m-error__icon">
+                  <path d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z" transform=""></path>
+                </svg>
+                {{ .Error }}
+              </p>
+              {{ end }}
+              <div class="pf-c-form__group">
+                <label class="pf-c-form__label" for="inputUsername">
+                  <span class="pf-c-form__label-text">Username</span>
+                  <span class="pf-c-form__label-required" aria-hidden="true">*</span>
+                </label>
+                <input type="text" class="pf-c-form-control" id="inputUsername" placeholder="" tabindex="1" autofocus="autofocus" type="text" name="{{ .Names.Username }}" value="{{ .Values.Username }}">
+              </div>
+              <div class="pf-c-form__group">
+                <label class="pf-c-form__label" for="inputPassword">
+                  <span class="pf-c-form__label-text">Password</span>
+                  <span class="pf-c-form__label-required" aria-hidden="true">*</span>
+                </label>
+                <input type="password" class="pf-c-form-control" id="inputPassword" placeholder="" tabindex="2" type="password" name="{{ .Names.Password }}" value="">
+              </div>
+              <div class="pf-c-form__group pf-m-action">
+                <button class="pf-c-button pf-m-primary pf-m-block" type="submit" tabindex="3">Log in</button>
+              </div>
+            </form>{% endraw %}
+          </div>
+        </main>
+        <footer class="pf-c-login__footer">
+          {{ content }}
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+---
+layout: index
+---
+
+<h1>{{site.title}}</h1>
+{% for collection in site.collections %}
+  {% if collection.label != "posts" %}
+  <h2>{{ collection.name }}</h2>
+  <ul>
+    {% for doc in collection.docs %}
+    <li>
+      <a href="{{ doc.url | remove_first:'/' }}">{{ doc.layout }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endfor %}

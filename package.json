@@ -1,0 +1,11 @@
+{
+  "name": "oauth-templates",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rhamilto/oauth-templates.git",
+  "author": "Robb Hamilton <rhamilto@redhat.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@patternfly/patternfly": "^2.49.0"
+  }
+}

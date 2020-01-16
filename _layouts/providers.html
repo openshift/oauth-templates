@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  {% include head.html %}
+  <body class="pf-m-redhat-font">
+    <div class="pf-c-login">
+      <div class="pf-c-login__container">
+        <header class="pf-c-login__header">
+          {% if page.collection == 'okd' %}
+            {%- include logo-okd.html %}
+          {% else %}
+            {%- include logo-ocp.html %}
+          {% endif %}
+        </header>
+        <main class="pf-c-login__main">
+          <div class="pf-c-login__main-body">
+            {% raw %}{{ if eq (len .Providers) 1}}
+              <a class="pf-c-button pf-m-primary" href="{{ (index .Providers 0).URL }}">Log In</a>
+            {{ else }}
+              <p>Log in with&hellip;</p>
+              <ul>
+                {{ range $provider := .Providers }}
+                  <li class="idp">
+                    <a href="{{$provider.URL}}" class="pf-c-button pf-m-primary" title="Log in with {{$provider.Name}}">{{$provider.Name}}</a>
+                  </li>
+                {{ end }}
+              </ul>
+            {{ end }}{% endraw %}
+          </div>
+        </main>
+        <footer class="pf-c-login__footer">
+          {{ content }}
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

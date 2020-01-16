@@ -1,0 +1,48 @@
+<head>
+    <title>{{page.title}} - {{page.brand}}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if page.collection == 'okd' %}
+      {%- include favicon-okd.html %}
+    {% else %}
+      {%- include favicon-openshift.html %}
+    {% endif %}
+    {%- capture styles -%}
+      {% include fonts.scss %}
+      {% include patternfly/sass-utilities/functions.scss %}
+      {% include patternfly/sass-utilities/colors.scss %}
+      {% include patternfly/sass-utilities/scss-variables.scss %}
+      {% include patternfly/sass-utilities/mixins.scss %}
+      {% include patternfly/sass-utilities/placeholders.scss %}
+      {% include patternfly/_variables.scss %}
+      {% include patternfly/_globals.scss %}
+      {% include patternfly/components/Login/login.scss %}
+      .pf-c-login {
+        background: var(--pf-global--Color--100);
+      }
+      {% if page.layout == 'login' %}
+        {% include patternfly/components/Form/form.scss %}
+        {% include patternfly/components/FormControl/form-control.scss %}
+        .pf-m-error__icon {
+          margin-right: 5px;
+        }
+      {% endif %}
+      {% if page.layout == 'error' %}
+        {% include patternfly/components/Alert/alert.scss %}
+        .pf-c-login__main--error {
+          background: transparent;
+        }
+      {% endif %}
+      {% if page.layout == 'providers' %}
+        .idp {
+          margin: 12px 0;
+        }
+      {% endif %}
+      {% if page.layout == 'login' or page.layout == 'providers' %}
+        {% include patternfly/components/Button/button.scss %}
+      {% endif %}
+    {%- endcapture -%}
+    <style>
+      {{ styles | scssify }}
+    </style>
+  </head>
