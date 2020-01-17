@@ -17,29 +17,62 @@
       {% include patternfly/_variables.scss %}
       {% include patternfly/_globals.scss %}
       {% include patternfly/components/Login/login.scss %}
-      .pf-c-login {
-        background: var(--pf-global--Color--100);
+      body {
+        background-color: var(--pf-global--BackgroundColor--dark-100);
+        {% if page.collection != 'okd' %}
+          background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxOTJweCIgaGVpZ2h0PSIxNDVweCIgdmlld0JveD0iMCAwIDE5MiAxNDUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE5MiAxNDU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMDIwMzAzO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTI3LjUsODMuNWMxMi41LDAsMzAuNi0yLjYsMzAuNi0xNy41YzAtMS4yLDAtMi4zLTAuMy0zLjRsLTcuNC0zMi40Yy0xLjctNy4xLTMuMi0xMC4zLTE1LjctMTYuNgoJCWMtOS43LTUtMzAuOC0xMy4xLTM3LjEtMTMuMUM5MS43LDAuNSw5MCw4LDgzLjEsOGMtNi43LDAtMTEuNi01LjYtMTcuOS01LjZjLTYsMC05LjksNC4xLTEyLjksMTIuNWMwLDAtOC40LDIzLjctOS41LDI3LjIKCQljLTAuMiwwLjYtMC4yLDEuNC0wLjIsMS45QzQyLjUsNTMuMyw3OC44LDgzLjUsMTI3LjUsODMuNSBNMTYwLDcyLjFjMS43LDguMiwxLjcsOS4xLDEuNywxMC4xYzAsMTQtMTUuNywyMS44LTM2LjQsMjEuOAoJCWMtNDYuOCwwLTg3LjctMjcuNC04Ny43LTQ1LjVjMC0yLjgsMC42LTUuNCwxLjUtNy4zQzIyLjMsNTIsMC41LDU1LDAuNSw3NC4yYzAsMzEuNSw3NC42LDcwLjMsMTMzLjcsNzAuMwoJCWM0NS4zLDAsNTYuNy0yMC41LDU2LjctMzYuNkMxOTAuOCw5NS4xLDE3OS45LDgwLjcsMTYwLDcyLjEiLz4KPC9nPgo8L3N2Zz4K);
+          background-position: 140% 110%;
+          background-repeat: no-repeat;
+          background-size: 90%;
+          @media(min-width: 768px) {
+            background-position: 250% 85%;
+          }
+          @media(min-width: 1200px) {
+            background-position: 90% 65%;
+            background-size: 80%;
+          }
+          @media(min-width: 1800px) {
+            background-position: 40% 65%;
+            background-size: 60%;
+          }
+        {% endif %}
       }
+      .pf-c-login__main-body {
+        padding-bottom: var(--pf-global--spacer--2xl) !important;
+      }
+      {% if page.collection == 'ocp' %}
+        @media(min-width: 1200px) {
+          .pf-c-brand {
+            width: 400px;
+          }
+        }
+      {% endif %}
       {% if page.layout == 'login' %}
         {% include patternfly/components/Form/form.scss %}
         {% include patternfly/components/FormControl/form-control.scss %}
+        .error-placeholder {
+          min-height: 21px;
+        }
+      {% endif %}
+      {% if page.layout == 'login' or page.layout == 'errors' %}
         .pf-m-error__icon {
           margin-right: 5px;
         }
-      {% endif %}
-      {% if page.layout == 'error' %}
-        {% include patternfly/components/Alert/alert.scss %}
-        .pf-c-login__main--error {
-          background: transparent;
-        }
-      {% endif %}
-      {% if page.layout == 'providers' %}
-        .idp {
-          margin: 12px 0;
+        .pf-c-form__helper-text.pf-m-error {
+          color: var(--pf-global--danger-color--100);
         }
       {% endif %}
       {% if page.layout == 'login' or page.layout == 'providers' %}
         {% include patternfly/components/Button/button.scss %}
+        .pf-c-title.pf-m-3xl {
+          font-size: 28px;
+          line-height: 36.4px;
+        }
+      {% endif %}
+      {% if page.layout == 'providers' %}
+        .idp {
+          margin: 24px 0 0;
+        }
       {% endif %}
     {%- endcapture -%}
     <style>

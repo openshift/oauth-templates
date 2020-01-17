@@ -1,10 +1,10 @@
 {
   "name": "oauth-templates",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.0",
+  "main": "_site/index.html",
   "repository": "git@github.com:rhamilto/oauth-templates.git",
   "author": "Robb Hamilton <rhamilto@redhat.com>",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@patternfly/patternfly": "^2.49.0"
   }
