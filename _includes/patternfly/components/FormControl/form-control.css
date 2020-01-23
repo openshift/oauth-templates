@@ -1,4 +1,3 @@
-/* stylelint-enable */
 .pf-c-form-control {
   --pf-global--Color--100: var(--pf-global--Color--dark-100);
   --pf-global--Color--200: var(--pf-global--Color--dark-200);
@@ -8,8 +7,6 @@
   --pf-global--link--Color--hover: var(--pf-global--link--Color--dark--hover);
   --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--light-100); }
 
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-form-control {
   --pf-c-form-control--FontSize: var(--pf-global--FontSize--md);
   --pf-c-form-control--LineHeight: var(--pf-global--LineHeight--md);
@@ -74,10 +71,8 @@
   border: var(--pf-c-form-control--BorderWidth) solid;
   border-color: var(--pf-c-form-control--BorderTopColor) var(--pf-c-form-control--BorderRightColor) var(--pf-c-form-control--BorderBottomColor) var(--pf-c-form-control--BorderLeftColor);
   border-radius: var(--pf-c-form-control--BorderRadius);
-  /* stylelint-disable */
   -moz-appearance: none;
-  -webkit-appearance: none;
-  /* stylelint-enable */ }
+  -webkit-appearance: none; }
   .pf-c-form-control::placeholder {
     --pf-c-form-control--Color: var(--pf-c-form-control--placeholder--Color); }
   .pf-c-form-control:not(textarea) {

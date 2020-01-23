@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-expandable {
   --pf-c-expandable__toggle--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-expandable__toggle--PaddingRight: var(--pf-global--spacer--md);

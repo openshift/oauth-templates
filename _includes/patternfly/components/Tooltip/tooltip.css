@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-tooltip {
   --pf-c-tooltip--MaxWidth: 18.75rem;
   --pf-c-tooltip__content--PaddingTop: var(--pf-global--spacer--md);

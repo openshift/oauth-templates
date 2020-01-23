@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-overflow-menu {
   --pf-c-overflow-menu--spacer--base: var(--pf-global--spacer--md);
   --pf-c-overflow-menu--spacer: var(--pf-global--spacer--sm);

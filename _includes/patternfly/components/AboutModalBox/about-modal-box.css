@@ -1,4 +1,3 @@
-/* stylelint-enable */
 .pf-c-about-modal-box {
   --pf-global--Color--100: var(--pf-global--Color--light-100);
   --pf-global--Color--200: var(--pf-global--Color--light-200);
@@ -27,10 +26,8 @@
     --pf-c-button--m-secondary--focus--BorderColor: var(--pf-global--Color--light-100);
     --pf-c-button--m-secondary--active--BorderColor: var(--pf-global--Color--light-100); }
 
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-about-modal-box {
-  --pf-c-about-modal-box--BackgroundColor: #030303;
+  --pf-c-about-modal-box--BackgroundColor: var(--pf-global--palette--black-1000);
   --pf-c-about-modal-box--BoxShadow: 0 0 100px 0 rgba(255, 255, 255, .05);
   --pf-c-about-modal-box--ZIndex: var(--pf-global--ZIndex--xl);
   --pf-c-about-modal-box--Height: 100%;
@@ -68,7 +65,7 @@
   --pf-c-about-modal-box__close--c-button--BorderRadius: var(--pf-global--BorderRadius--lg);
   --pf-c-about-modal-box__close--c-button--Width: calc(var(--pf-c-about-modal-box__close--c-button--FontSize) * 2);
   --pf-c-about-modal-box__close--c-button--Height: calc(var(--pf-c-about-modal-box__close--c-button--FontSize) * 2);
-  --pf-c-about-modal-box__close--c-button--BackgroundColor: #030303;
+  --pf-c-about-modal-box__close--c-button--BackgroundColor: var(--pf-global--palette--black-1000);
   --pf-c-about-modal-box__close--c-button--hover--BackgroundColor: rgba(3, 3, 3, 0.4);
   --pf-c-about-modal-box__hero--sm--BackgroundImage: url("../../assets/images/pfbg_992@2x.jpg");
   --pf-c-about-modal-box__hero--sm--BackgroundPosition: top left;

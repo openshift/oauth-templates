@@ -1,4 +1,3 @@
-/* stylelint-enable */
 .pf-c-chip {
   --pf-global--Color--100: var(--pf-global--Color--dark-100);
   --pf-global--Color--200: var(--pf-global--Color--dark-200);
@@ -8,8 +7,6 @@
   --pf-global--link--Color--hover: var(--pf-global--link--Color--dark--hover);
   --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--light-100); }
 
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-chip {
   --pf-c-chip--PaddingLeft: var(--pf-global--spacer--sm);
   --pf-c-chip--BackgroundColor: var(--pf-global--Color--light-100);
@@ -67,21 +64,15 @@
       .pf-c-chip.pf-m-overflow .pf-c-button::after {
         border: var(--pf-c-chip--m-overflow--c-button--BorderWidth) solid var(--pf-c-chip--m-overflow--c-button--active--BorderColor);
         border-radius: var(--pf-c-chip--m-overflow--c-button--BorderRadius); }
-      .pf-c-chip.pf-m-overflow .pf-c-button.pf-m-hover, .pf-c-chip.pf-m-overflow .pf-c-button:hover {
-        /* stylelint-disable-next-line */ }
-        .pf-c-chip.pf-m-overflow .pf-c-button.pf-m-hover::after, .pf-c-chip.pf-m-overflow .pf-c-button:hover::after {
-          --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--hover--BorderWidth);
-          --pf-c-chip--m-overflow--c-button--BorderColor: var(--pf-c-chip--m-overflow--c-button--hover--BorderColor); }
-      .pf-c-chip.pf-m-overflow .pf-c-button.pf-m-active, .pf-c-chip.pf-m-overflow .pf-c-button:active {
-        /* stylelint-disable-next-line */ }
-        .pf-c-chip.pf-m-overflow .pf-c-button.pf-m-active::after, .pf-c-chip.pf-m-overflow .pf-c-button:active::after {
-          --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--active--BorderWidth);
-          --pf-c-chip--m-overflow--c-button--BorderColor: var(--pf-c-chip--m-overflow--c-button--active--BorderColor); }
-      .pf-c-chip.pf-m-overflow .pf-c-button.pf-m-focus, .pf-c-chip.pf-m-overflow .pf-c-button:focus {
-        /* stylelint-disable-next-line */ }
-        .pf-c-chip.pf-m-overflow .pf-c-button.pf-m-focus::after, .pf-c-chip.pf-m-overflow .pf-c-button:focus::after {
-          --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--focus--BorderWidth);
-          --pf-c-chip--m-overflow--c-button--BorderColor: var(--pf-c-chip--m-overflow--c-button--focus--BorderColor); }
+      .pf-c-chip.pf-m-overflow .pf-c-button.pf-m-hover::after, .pf-c-chip.pf-m-overflow .pf-c-button:hover::after {
+        --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--hover--BorderWidth);
+        --pf-c-chip--m-overflow--c-button--BorderColor: var(--pf-c-chip--m-overflow--c-button--hover--BorderColor); }
+      .pf-c-chip.pf-m-overflow .pf-c-button.pf-m-active::after, .pf-c-chip.pf-m-overflow .pf-c-button:active::after {
+        --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--active--BorderWidth);
+        --pf-c-chip--m-overflow--c-button--BorderColor: var(--pf-c-chip--m-overflow--c-button--active--BorderColor); }
+      .pf-c-chip.pf-m-overflow .pf-c-button.pf-m-focus::after, .pf-c-chip.pf-m-overflow .pf-c-button:focus::after {
+        --pf-c-chip--m-overflow--c-button--BorderWidth: var(--pf-c-chip--m-overflow--c-button--focus--BorderWidth);
+        --pf-c-chip--m-overflow--c-button--BorderColor: var(--pf-c-chip--m-overflow--c-button--focus--BorderColor); }
   .pf-c-chip.pf-m-read-only {
     padding-top: var(--pf-c-chip--m-read-only--PaddingTop);
     padding-right: var(--pf-c-chip--m-read-only--PaddingRight);

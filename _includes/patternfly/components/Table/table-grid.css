@@ -1,7 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
-/* stylelint-disable */
 .pf-c-table[class*="pf-m-grid"] {
   --pf-c-table--responsive--BorderColor: var(--pf-global--BorderColor--300);
   --pf-c-table-tbody--responsive--MarginTop: var(--pf-global--spacer--xs);
@@ -887,5 +883,3 @@
     .pf-m-grid-2xl.pf-c-table .pf-m-fit-content {
       width: auto;
       white-space: normal; } }
-
-/* stylelint-enable */

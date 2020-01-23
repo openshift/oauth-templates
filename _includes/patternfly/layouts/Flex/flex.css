@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-l-flex {
   --pf-l-flex--Display: flex;
   --pf-l-flex--FlexWrap: wrap;
@@ -23,7 +20,6 @@
   .pf-l-flex:last-child {
     --pf-l-flex--spacer: 0; }
 
-/* stylelint-disable no-duplicate-selectors, max-nesting-depth */
 .pf-l-flex > * {
   --pf-l-flex--spacer: var(--pf-l-flex--spacer-base);
   margin-right: var(--pf-l-flex--spacer); }
@@ -1091,5 +1087,3 @@
     --pf-l-flex--spacer: var(--pf-l-flex--spacer--3xl); }
     .pf-l-flex .pf-m-spacer-3xl-on-2xl:last-child {
       --pf-l-flex--spacer: var(--pf-l-flex--spacer--3xl); } }
-
-/* stylelint-enable */

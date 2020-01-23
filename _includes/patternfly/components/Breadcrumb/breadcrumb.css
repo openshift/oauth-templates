@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-breadcrumb {
   --pf-c-breadcrumb__item--FontSize: var(--pf-global--FontSize--sm);
   --pf-c-breadcrumb__item--FontWeight: var(--pf-global--FontWeight--semi-bold);

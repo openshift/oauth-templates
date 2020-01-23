@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-background-image {
   --pf-c-background-image--BackgroundColor: var(--pf-global--BackgroundColor--dark-100);
   --pf-c-background-image--BackgroundImage: url("../../assets/images/pfbg_576.jpg");
@@ -21,9 +18,7 @@
     background-image: var(--pf-c-background-image--BackgroundImage);
     filter: var(--pf-c-background-image--Filter);
     background-repeat: no-repeat;
-    background-size: cover;
-    /* stylelint-disable */
-    /* stylelint-enable */ }
+    background-size: cover; }
     @media (max-width: 576px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 576px) and (min-resolution: 192dpi) {
       .pf-c-background-image::before {
         --pf-c-background-image--BackgroundImage: var(--pf-c-background-image--BackgroundImage-2x); } }

@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-l-gallery {
   --pf-l-gallery--m-gutter--GridGap: var(--pf-global--gutter);
   --pf-l-gallery--m-gutter--md--GridGap: var(--pf-global--gutter--md);

@@ -1,4 +1,3 @@
-/* stylelint-enable */
 .pf-c-input-group {
   --pf-global--Color--100: var(--pf-global--Color--dark-100);
   --pf-global--Color--200: var(--pf-global--Color--dark-200);
@@ -8,8 +7,6 @@
   --pf-global--link--Color--hover: var(--pf-global--link--Color--dark--hover);
   --pf-global--BackgroundColor--100: var(--pf-global--BackgroundColor--light-100); }
 
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-input-group {
   --pf-c-input-group--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-input-group--BorderRadius: var(--pf-global--BorderRadius--sm);
@@ -31,9 +28,7 @@
   display: flex;
   width: 100%;
   background-color: var(--pf-c-input-group--BackgroundColor);
-  border-radius: var(--pf-c-input-group--BorderRadius);
-  /* stylelint-disable */
-  /* stylelint-enable */ }
+  border-radius: var(--pf-c-input-group--BorderRadius); }
   .pf-c-input-group > * + * {
     margin-left: -1px; }
   .pf-c-input-group .pf-c-form-control[aria-invalid="true"]:not(:last-child) {

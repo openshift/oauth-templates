@@ -1,4 +1,3 @@
-/* stylelint-enable */
 .pf-c-wizard__header {
   --pf-global--Color--100: var(--pf-global--Color--light-100);
   --pf-global--Color--200: var(--pf-global--Color--light-200);
@@ -27,8 +26,6 @@
     --pf-c-button--m-secondary--focus--BorderColor: var(--pf-global--Color--light-100);
     --pf-c-button--m-secondary--active--BorderColor: var(--pf-global--Color--light-100); }
 
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-wizard {
   --pf-c-wizard--BoxShadow: var(--pf-global--BoxShadow--lg);
   --pf-c-wizard--Height: 100%;

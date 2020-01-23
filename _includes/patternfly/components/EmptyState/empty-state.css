@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-empty-state {
   --pf-c-empty-state--Padding: var(--pf-global--spacer--xl);
   --pf-c-empty-state__icon--MarginBottom: var(--pf-global--spacer--lg);
@@ -23,8 +20,7 @@
   --pf-c-empty-state--m-xl__icon--FontSize: 6.25rem;
   --pf-c-empty-state--m-xl--c-button__secondary--MarginTop: var(--pf-global--spacer--md);
   padding: var(--pf-c-empty-state--Padding);
-  text-align: center;
-  /* stylelint-disable */ }
+  text-align: center; }
   .pf-c-empty-state > .pf-c-button.pf-m-primary,
   .pf-c-empty-state .pf-c-empty-state__primary {
     margin-top: var(--pf-c-empty-state--c-button--MarginTop); }
@@ -45,7 +41,6 @@
     .pf-c-empty-state.pf-m-xl .pf-c-empty-state__primary + .pf-c-empty-state__secondary {
       --pf-c-empty-state--c-button__secondary--MarginTop: var(--pf-c-empty-state--m-xl--c-button__secondary--MarginTop); }
 
-/* stylelint-enable */
 .pf-c-empty-state__icon {
   margin-bottom: var(--pf-c-empty-state__icon--MarginBottom);
   font-size: var(--pf-c-empty-state__icon--FontSize);
