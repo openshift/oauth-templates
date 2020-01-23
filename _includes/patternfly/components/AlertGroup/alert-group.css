@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-alert-group {
   --pf-c-alert-group__item--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-alert-group--m-toast--Top: var(--pf-global--spacer--2xl);

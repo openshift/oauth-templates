@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-l-stack {
   --pf-l-stack--m-gutter--MarginBottom: var(--pf-global--gutter);
   --pf-l-stack--m-gutter--md--MarginBottom: var(--pf-global--gutter--md);

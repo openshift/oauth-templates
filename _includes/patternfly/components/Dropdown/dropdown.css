@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-dropdown {
   --pf-c-dropdown__toggle--PaddingTop: var(--pf-global--spacer--form-element);
   --pf-c-dropdown__toggle--PaddingRight: var(--pf-global--spacer--sm);
@@ -136,9 +133,7 @@
       --pf-c-dropdown__toggle--m-split-button--child--PaddingRight: var(--pf-c-dropdown__toggle--m-split-button--m-action--child--PaddingRight);
       --pf-c-dropdown__toggle--m-split-button--child--PaddingLeft: var(--pf-c-dropdown__toggle--m-split-button--m-action--child--PaddingLeft); }
       .pf-c-dropdown__toggle.pf-m-split-button.pf-m-action .pf-c-dropdown__toggle-button {
-        margin-right: var(--pf-c-dropdown__toggle--m-split-button--m-action__toggle-button--MarginRight);
-        /* stylelint-disable max-nesting-depth */
-        /* stylelint-enable */ }
+        margin-right: var(--pf-c-dropdown__toggle--m-split-button--m-action__toggle-button--MarginRight); }
         .pf-c-dropdown__toggle.pf-m-split-button.pf-m-action .pf-c-dropdown__toggle-button::before {
           border-left: 0; }
         .pf-c-dropdown__toggle.pf-m-split-button.pf-m-action .pf-c-dropdown__toggle-button:last-child {
@@ -215,8 +210,7 @@
 .pf-c-dropdown__toggle-icon {
   margin-right: var(--pf-c-dropdown__toggle-icon--MarginRight);
   margin-left: var(--pf-c-dropdown__toggle-icon--MarginLeft);
-  line-height: var(--pf-c-dropdown__toggle--LineHeight);
-  /* stylelint-disable-next-line */ }
+  line-height: var(--pf-c-dropdown__toggle--LineHeight); }
   .pf-c-dropdown.pf-m-top.pf-m-expanded .pf-c-dropdown__toggle-icon {
     transform: var(--pf-c-dropdown--m-top--m-expanded__toggle-icon--Transform); }
 

@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-notification-drawer {
   --pf-c-notification-drawer--BackgroundColor: var(--pf-global--BackgroundColor--200);
   --pf-c-notification-drawer__header--PaddingTop: var(--pf-global--spacer--md);

@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-data-toolbar {
   --pf-c-data-toolbar--BackgroundColor: var(--pf-global--BackgroundColor--100);
   --pf-c-data-toolbar--RowGap: var(--pf-global--spacer--lg);
@@ -250,7 +247,6 @@
       display: none;
       visibility: hidden; } }
 
-/* stylelint-disable max-nesting-depth, no-duplicate-selectors */
 .pf-c-data-toolbar .pf-c-data-toolbar__item.pf-m-align-right,
 .pf-c-data-toolbar .pf-c-data-toolbar__group.pf-m-align-right {
   margin-left: auto; }

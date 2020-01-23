@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-pagination {
   --pf-c-pagination--child--MarginRight: var(--pf-global--spacer--lg);
   --pf-c-pagination--m-compact--child--MarginRight: var(--pf-global--spacer--sm);
@@ -51,10 +48,8 @@
     padding-right: var(--pf-c-pagination__nav--c-button--PaddingRight);
     padding-left: var(--pf-c-pagination__nav--c-button--PaddingLeft);
     font-size: var(--pf-c-pagination__nav--c-button--FontSize); }
-    .pf-c-pagination.pf-m-compact .pf-c-pagination__nav .pf-c-button {
-      /* stylelint-disable-next-line */ }
-      .pf-c-pagination.pf-m-compact .pf-c-pagination__nav .pf-c-button + .pf-c-button {
-        margin-left: var(--pf-c-pagination--m-compact__nav--c-button--MarginLeft); }
+    .pf-c-pagination.pf-m-compact .pf-c-pagination__nav .pf-c-button + .pf-c-button {
+      margin-left: var(--pf-c-pagination--m-compact__nav--c-button--MarginLeft); }
 
 .pf-c-pagination__nav-page-select {
   display: flex;

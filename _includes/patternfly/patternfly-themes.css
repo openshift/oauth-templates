@@ -1,4 +1,3 @@
-/* stylelint-enable */
 .pf-t-light {
   --pf-global--Color--100: var(--pf-global--Color--dark-100);
   --pf-global--Color--200: var(--pf-global--Color--dark-200);
@@ -36,8 +35,6 @@
     --pf-c-button--m-secondary--focus--BorderColor: var(--pf-global--Color--light-100);
     --pf-c-button--m-secondary--active--BorderColor: var(--pf-global--Color--light-100); }
 
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-t-dark.pf-m-transparent {
   background-color: transparent; }
 

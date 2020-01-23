@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-l-split {
   --pf-l-split--m-gutter--MarginRight: var(--pf-global--gutter);
   --pf-l-split--m-gutter--md--MarginRight: var(--pf-global--gutter--md);

@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-clipboard-copy {
   --pf-c-clipboard-copy__group-toggle--PaddingRight: var(--pf-global--spacer--md);
   --pf-c-clipboard-copy__group-toggle--PaddingLeft: var(--pf-global--spacer--md);

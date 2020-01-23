@@ -1,7 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
-/* stylelint-disable */
 html {
   font-size: unset !important; }
 
@@ -11,5 +7,3 @@ html {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0; }
-
-/* stylelint-enable */

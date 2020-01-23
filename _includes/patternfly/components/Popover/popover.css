@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-popover {
   --pf-c-popover--MinWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + 6.25rem);
   --pf-c-popover--MaxWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + 18.75rem);

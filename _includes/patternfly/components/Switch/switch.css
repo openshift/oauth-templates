@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-switch {
   --pf-c-switch--Height: calc(var(--pf-c-switch--FontSize) * var(--pf-c-switch--LineHeight));
   --pf-c-switch--Width: calc(var(--pf-c-switch--Height) + var(--pf-c-switch__toggle-icon--Offset) + var(--pf-c-switch__toggle--before--Width));
@@ -44,13 +41,11 @@
   font-size: var(--pf-c-switch--FontSize);
   line-height: var(--pf-c-switch--LineHeight);
   vertical-align: middle;
-  cursor: pointer;
-  /* stylelint-enable */ }
+  cursor: pointer; }
   .pf-c-switch .pf-c-switch__input {
     position: absolute;
     cursor: pointer;
-    opacity: 0;
-    /* stylelint-disable */ }
+    opacity: 0; }
     .pf-c-switch .pf-c-switch__input:focus ~ .pf-c-switch__toggle {
       outline: var(--pf-c-switch__input--focus__toggle--OutlineWidth) solid var(--pf-c-switch__input--focus__toggle--OutlineColor);
       outline-offset: var(--pf-c-switch__input--focus__toggle--OutlineOffset); }

@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-progress {
   --pf-c-progress--GridGap: var(--pf-global--spacer--md);
   --pf-c-progress__bar--before--BackgroundColor: var(--pf-global--primary-color--100);

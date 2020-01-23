@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-c-app-launcher {
   --pf-c-app-launcher__menu--BackgroundColor: var(--pf-global--BackgroundColor--light-100);
   --pf-c-app-launcher__menu--BorderWidth: var(--pf-global--BorderWidth--sm);
@@ -45,7 +42,7 @@
   --pf-c-app-launcher__menu-item--m-action--FontSize: var(--pf-global--icon--FontSize--sm);
   --pf-c-app-launcher__menu-item--hover__menu-item--m-action--Color: var(--pf-global--Color--200);
   --pf-c-app-launcher__menu-item--m-action--hover--Color: var(--pf-global--Color--100);
-  --pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--Color: #f0ab00;
+  --pf-c-app-launcher__menu-item--m-favorite__menu-item--m-action--Color: var(--pf-global--palette--gold-400);
   --pf-c-app-launcher__menu-item-icon--MarginRight: var(--pf-global--spacer--sm);
   --pf-c-app-launcher__menu-item-icon--Width: var(--pf-global--icon--FontSize--lg);
   --pf-c-app-launcher__menu-item-icon--Height: var(--pf-global--icon--FontSize--lg);
@@ -138,10 +135,8 @@
     pointer-events: none; }
   .pf-c-app-launcher__menu-wrapper:disabled, .pf-c-app-launcher__menu-wrapper.pf-m-disabled, .pf-c-app-launcher__menu-item:disabled, .pf-c-app-launcher__menu-item.pf-m-disabled {
     background-color: transparent; }
-  .pf-c-app-launcher__menu-wrapper.pf-m-external:hover, .pf-c-app-launcher__menu-wrapper.pf-m-external:focus, .pf-c-app-launcher__menu-item.pf-m-external:hover, .pf-c-app-launcher__menu-item.pf-m-external:focus {
-    /* stylelint-disable-next-line */ }
-    .pf-c-app-launcher__menu-wrapper.pf-m-external:hover .pf-c-app-launcher__menu-item-external-icon, .pf-c-app-launcher__menu-wrapper.pf-m-external:focus .pf-c-app-launcher__menu-item-external-icon, .pf-c-app-launcher__menu-item.pf-m-external:hover .pf-c-app-launcher__menu-item-external-icon, .pf-c-app-launcher__menu-item.pf-m-external:focus .pf-c-app-launcher__menu-item-external-icon {
-      opacity: 1; }
+  .pf-c-app-launcher__menu-wrapper.pf-m-external:hover .pf-c-app-launcher__menu-item-external-icon, .pf-c-app-launcher__menu-wrapper.pf-m-external:focus .pf-c-app-launcher__menu-item-external-icon, .pf-c-app-launcher__menu-item.pf-m-external:hover .pf-c-app-launcher__menu-item-external-icon, .pf-c-app-launcher__menu-item.pf-m-external:focus .pf-c-app-launcher__menu-item-external-icon {
+    opacity: 1; }
   .pf-c-app-launcher__menu-item.pf-m-link {
     --pf-c-app-launcher__menu-item--PaddingRight: var(--pf-c-app-launcher__menu-item--m-link--PaddingRight);
     --pf-c-app-launcher__menu-item--hover--BackgroundColor: var(--pf-c-app-launcher__menu-item--m-link--hover--BackgroundColor); }

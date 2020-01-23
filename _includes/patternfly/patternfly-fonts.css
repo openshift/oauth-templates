@@ -1,7 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
-/* stylelint-disable font-family-name-quotes */
 @font-face {
   font-family: "RedHatDisplay";
   src: url("./assets/fonts/RedHatDisplay/RedHatDisplay-Regular.eot");
@@ -47,9 +43,7 @@
   font-style: normal;
   font-weight: 200;
   src: url("./assets/fonts/overpass-webfont/overpass-thin.eot");
-  /* IE9 Compat Modes */
-  src: url("./assets/fonts/overpass-webfont/overpass-thin.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/overpass-webfont/overpass-thin.woff2") format("woff2"), url("./assets/fonts/overpass-webfont/overpass-thin.woff") format("woff"), url("./assets/fonts/overpass-webfont/overpass-thin.ttf") format("truetype");
-  /* Safari, Android, iOS */ }
+  src: url("./assets/fonts/overpass-webfont/overpass-thin.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/overpass-webfont/overpass-thin.woff2") format("woff2"), url("./assets/fonts/overpass-webfont/overpass-thin.woff") format("woff"), url("./assets/fonts/overpass-webfont/overpass-thin.ttf") format("truetype"); }
 
 @font-face {
   font-family: "overpass";
@@ -183,5 +177,3 @@
   font-weight: 600;
   src: url("./assets/fonts/overpass-mono-webfont/overpass-mono-bold.eot");
   src: url("./assets/fonts/overpass-mono-webfont/overpass-mono-bold.eot?#iefix") format("embedded-opentype"), url("./assets/fonts/overpass-mono-webfont/overpass-mono-bold.woff2") format("woff2"), url("./assets/fonts/overpass-mono-webfont/overpass-mono-bold.woff") format("woff"), url("./assets/fonts/overpass-mono-webfont/overpass-mono-bold.ttf") format("truetype"); }
-
-/* stylelint-enable */

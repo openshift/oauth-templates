@@ -1,6 +1,3 @@
-/* stylelint-enable */
-/* stylelint-disable */
-/* stylelint-enable */
 .pf-u-screen-reader {
   position: fixed;
   overflow: hidden;
@@ -16,9 +13,7 @@
   border: inherit; }
 
 .pf-u-hidden {
-  /* stylelint-disable */
-  display: none !important;
-  /* stylelint-enable */ }
+  display: none !important; }
 
 @media screen and (min-width: 576px) {
   .pf-u-screen-reader-on-sm {
@@ -38,9 +33,7 @@
 
 @media screen and (min-width: 576px) {
   .pf-u-hidden-on-sm {
-    /* stylelint-disable */
-    display: none !important;
-    /* stylelint-enable */ } }
+    display: none !important; } }
 
 @media screen and (min-width: 768px) {
   .pf-u-screen-reader-on-md {
@@ -60,9 +53,7 @@
 
 @media screen and (min-width: 768px) {
   .pf-u-hidden-on-md {
-    /* stylelint-disable */
-    display: none !important;
-    /* stylelint-enable */ } }
+    display: none !important; } }
 
 @media screen and (min-width: 992px) {
   .pf-u-screen-reader-on-lg {
@@ -82,9 +73,7 @@
 
 @media screen and (min-width: 992px) {
   .pf-u-hidden-on-lg {
-    /* stylelint-disable */
-    display: none !important;
-    /* stylelint-enable */ } }
+    display: none !important; } }
 
 @media screen and (min-width: 1200px) {
   .pf-u-screen-reader-on-xl {
@@ -104,9 +93,7 @@
 
 @media screen and (min-width: 1200px) {
   .pf-u-hidden-on-xl {
-    /* stylelint-disable */
-    display: none !important;
-    /* stylelint-enable */ } }
+    display: none !important; } }
 
 @media screen and (min-width: 1450px) {
   .pf-u-screen-reader-on-2xl {
@@ -126,6 +113,4 @@
 
 @media screen and (min-width: 1450px) {
   .pf-u-hidden-on-2xl {
-    /* stylelint-disable */
-    display: none !important;
-    /* stylelint-enable */ } }
+    display: none !important; } }
