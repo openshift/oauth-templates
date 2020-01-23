@@ -2,7 +2,7 @@
   "name": "oauth-templates",
   "version": "0.0.0",
   "main": "_site/index.html",
-  "repository": "git@github.com:rhamilto/oauth-templates.git",
+  "repository": "git@github.com:openshift/oauth-templates.git",
   "author": "Robb Hamilton <rhamilto@redhat.com>",
   "license": "Apache-2.0",
   "devDependencies": {

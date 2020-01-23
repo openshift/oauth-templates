@@ -2,7 +2,7 @@
 
 The upstream source for the login, errors, and providers HTML templates for OpenShift.
 
-View the templates at https://rhamilto.github.io/oauth-templates/.
+View the templates at https://openshift.github.io/oauth-templates/.
 
 ## Development
 
