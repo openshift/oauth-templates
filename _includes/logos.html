@@ -1,5 +1,7 @@
 {%- if collection.label == 'okd' -%}
   {%- include logo-okd.html %}
-{%- else -%}
+{%- elsif collection.label == 'od' -%}
+  {%- include logo-od.html %}
+{%- else  -%}
   {%- include logo-ocp.html %}
 {%- endif -%}
