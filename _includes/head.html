@@ -1,8 +1,8 @@
 <head>
-    <title>{{page.title}} - {{page.brand}}</title>
+    <title>{{page.title}} - {{ collection.name }}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if page.collection == 'okd' %}
+    {% if collection.label == 'okd' %}
       {%- include favicon-okd.html %}
     {% else %}
       {%- include favicon-openshift.html %}
@@ -19,7 +19,7 @@
       {% include patternfly/components/Login/login.scss %}
       body {
         background-color: var(--pf-global--BackgroundColor--dark-100);
-        {% if page.collection != 'okd' %}
+        {% if collection.label != 'okd' %}
           background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxOTJweCIgaGVpZ2h0PSIxNDVweCIgdmlld0JveD0iMCAwIDE5MiAxNDUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE5MiAxNDU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMDIwMzAzO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTI3LjUsODMuNWMxMi41LDAsMzAuNi0yLjYsMzAuNi0xNy41YzAtMS4yLDAtMi4zLTAuMy0zLjRsLTcuNC0zMi40Yy0xLjctNy4xLTMuMi0xMC4zLTE1LjctMTYuNgoJCWMtOS43LTUtMzAuOC0xMy4xLTM3LjEtMTMuMUM5MS43LDAuNSw5MCw4LDgzLjEsOGMtNi43LDAtMTEuNi01LjYtMTcuOS01LjZjLTYsMC05LjksNC4xLTEyLjksMTIuNWMwLDAtOC40LDIzLjctOS41LDI3LjIKCQljLTAuMiwwLjYtMC4yLDEuNC0wLjIsMS45QzQyLjUsNTMuMyw3OC44LDgzLjUsMTI3LjUsODMuNSBNMTYwLDcyLjFjMS43LDguMiwxLjcsOS4xLDEuNywxMC4xYzAsMTQtMTUuNywyMS44LTM2LjQsMjEuOAoJCWMtNDYuOCwwLTg3LjctMjcuNC04Ny43LTQ1LjVjMC0yLjgsMC42LTUuNCwxLjUtNy4zQzIyLjMsNTIsMC41LDU1LDAuNSw3NC4yYzAsMzEuNSw3NC42LDcwLjMsMTMzLjcsNzAuMwoJCWM0NS4zLDAsNTYuNy0yMC41LDU2LjctMzYuNkMxOTAuOCw5NS4xLDE3OS45LDgwLjcsMTYwLDcyLjEiLz4KPC9nPgo8L3N2Zz4K);
           background-position: 140% 110%;
           background-repeat: no-repeat;
@@ -40,7 +40,7 @@
       .pf-c-login__main-body {
         padding-bottom: var(--pf-global--spacer--2xl) !important;
       }
-      {% if page.collection == 'ocp' %}
+      {% if collection.label == 'ocp' %}
         @media(min-width: 1200px) {
           .pf-c-brand {
             width: 400px;

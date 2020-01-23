@@ -1,3 +1,4 @@
+{%- include collection.html -%}
 <!DOCTYPE html>
 <html lang="en-us" data-test-id="login">
   {% include head.html %}
@@ -5,7 +6,7 @@
     <div class="pf-c-login">
       <div class="pf-c-login__container">
         <header class="pf-c-login__header">
-          {% if page.collection == 'okd' %}
+          {% if collection.label == 'okd' %}
             {%- include logo-okd.html %}
           {% else %}
             {%- include logo-ocp.html %}
