@@ -6,11 +6,7 @@
     <div class="pf-c-login">
       <div class="pf-c-login__container">
         <header class="pf-c-login__header">
-          {% if collection.label == 'okd' %}
-            {%- include logo-okd.html %}
-          {% else %}
-            {%- include logo-ocp.html %}
-          {% endif %}
+          {% include logos.html %}
         </header>
         <main class="pf-c-login__main">
           <div class="pf-c-login__main-body">
