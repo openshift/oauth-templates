@@ -40,10 +40,10 @@
       .pf-c-login__main-body {
         padding-bottom: var(--pf-global--spacer--2xl) !important;
       }
-      {% if collection.label == 'ocp' %}
+      {% if collection.label != 'okd' %}
         @media(min-width: 1200px) {
           .pf-c-brand {
-            width: 400px;
+            height: 61px;
           }
         }
       {% endif %}

@@ -38,6 +38,9 @@ collections:
   ocp:
     output: true
     name: "Red Hat OpenShift Container Platform"
+  od:
+    output: true
+    name: "Red Hat OpenShift Dedicated"
   okd:
     output: true
     name: "OKD"
