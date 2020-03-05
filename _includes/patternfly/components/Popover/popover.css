@@ -1,5 +1,5 @@
 .pf-c-popover {
-  --pf-c-popover--MinWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + 6.25rem);
+  --pf-c-popover--MinWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + 18.75rem);
   --pf-c-popover--MaxWidth: calc(var(--pf-c-popover--c-button--sibling--PaddingRight) + 18.75rem);
   --pf-c-popover--BoxShadow: var(--pf-global--BoxShadow--md);
   --pf-c-popover__content--BackgroundColor: var(--pf-global--BackgroundColor--100);
