@@ -3,6 +3,6 @@
 
 
 "@patternfly/patternfly@^2.49.0":
-  version "2.54.1"
-  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.54.1.tgz#359069439c1b9931882815c928bd3a6ef9fb8fcf"
-  integrity sha512-psbG9Z0aEQ5+to1vCKhPoBpQt0GxV/Xd6hg5UpjKhdEddnPoCnqmPU3B+JCWCu0phdTCva5mlwg4V/dkabkxyA==
+  version "2.66.0"
+  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-2.66.0.tgz#18c15d299a3ad8777f052b809ab21ec2ba4f8546"
+  integrity sha512-fZMr2q9LZhVtKAEcDJ4rzcCGC6iN93mEQPoLlv2T9td5Hba1bLw8Bpgp5fdTm95Fv/++AY0PsdUPZUzh1cx7Sg==

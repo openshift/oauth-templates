@@ -22,7 +22,9 @@
   --pf-c-modal-box--m-sm--sm--MaxWidth: 35rem;
   --pf-c-modal-box--m-lg--lg--MaxWidth: 70rem;
   --pf-c-modal-box--MaxHeight: calc(100vh - var(--pf-global--spacer--2xl));
+  --pf-c-modal-box__c-title--description--MarginTop: var(--pf-global--spacer--sm);
   --pf-c-modal-box--body--MinHeight: calc(var(--pf-global--FontSize--md) * var(--pf-global--LineHeight--md));
+  --pf-c-modal-box__description--body--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-modal-box--c-title--body--MarginTop: var(--pf-global--spacer--lg);
   --pf-c-modal-box--c-button--Top: calc(var(--pf-c-modal-box--PaddingTop) - var(--pf-global--spacer--form-element) + 0.0625rem);
   --pf-c-modal-box--c-button--Right: var(--pf-global--spacer--md);
@@ -55,13 +57,18 @@
     right: var(--pf-c-modal-box--c-button--Right); }
     .pf-c-modal-box > .pf-c-button + * {
       margin-right: var(--pf-c-modal-box--c-button--sibling--MarginRight); }
-  .pf-c-modal-box .pf-c-title {
+  .pf-c-modal-box > .pf-c-title {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     flex: 0 0 auto; }
-    .pf-c-modal-box .pf-c-title + .pf-c-modal-box__body {
+    .pf-c-modal-box > .pf-c-title + .pf-c-modal-box__description {
+      margin-top: var(--pf-c-modal-box__c-title--description--MarginTop); }
+    .pf-c-modal-box > .pf-c-title + .pf-c-modal-box__body {
       margin-top: var(--pf-c-modal-box--c-title--body--MarginTop); }
+
+.pf-c-modal-box__description + .pf-c-modal-box__body {
+  margin-top: var(--pf-c-modal-box__description--body--MarginTop); }
 
 .pf-c-modal-box__body {
   flex: 1 1 auto;
