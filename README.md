@@ -70,9 +70,9 @@ To undo the changes for testing:
 
 The OCP branded templates take advantage of the override mechanism by providing customized templates via secrets via the following method:
 
-1. Copy a [Base64-encoded](https://www.base64encode.org/) version of the generated source in `_site/ocp/errors.html` to https://github.com/openshift/cluster-authentication-operator/blob/master/manifests/06_branding_secret.yaml#L9.
-1. Copy a [Base64-encoded](https://www.base64encode.org/) version of the generated source in `_site/ocp/login.html` to https://github.com/openshift/cluster-authentication-operator/blob/master/manifests/06_branding_secret.yaml#L7.
-1. Copy a [Base64-encoded](https://www.base64encode.org/) version of the generated source in `_site/ocp/providers.html` to https://github.com/openshift/cluster-authentication-operator/blob/master/manifests/06_branding_secret.yaml#L8.
+1. Copy a [Base64-encoded](https://www.base64encode.org/) version of the generated source in `_site/ocp/errors.html` to https://github.com/openshift/cluster-authentication-operator/blob/master/bindata/oauth-openshift/branding-secret.yaml#L9.
+1. Copy a [Base64-encoded](https://www.base64encode.org/) version of the generated source in `_site/ocp/login.html` to https://github.com/openshift/cluster-authentication-operator/blob/master/bindata/oauth-openshift/branding-secret.yaml#L7.
+1. Copy a [Base64-encoded](https://www.base64encode.org/) version of the generated source in `_site/ocp/providers.html` to https://github.com/openshift/cluster-authentication-operator/blob/master/bindata/oauth-openshift/branding-secret.yaml#L8.
 1. Submit a pull request to https://github.com/openshift/cluster-authentication-operator containing the copied changes.
 
 To test the changes:
@@ -84,7 +84,7 @@ To test the changes:
     ```
 1. Recreate the branding secret:
     ```
-    oc create -f https://raw.githubusercontent.com/openshift/cluster-authentication-operator/<HASH>/manifests/06_branding_secret.yaml
+    oc create -f https://raw.githubusercontent.com/openshift/cluster-authentication-operator/<HASH>/bindata/oauth-openshift/branding-secret.yaml
     ```
 1. Delete existing openshift-authentication pods so they are regenerated with the new branding secret:
     ```
