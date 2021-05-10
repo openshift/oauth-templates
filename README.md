@@ -78,6 +78,7 @@ The OCP branded templates take advantage of the override mechanism by providing 
 To test the changes:
 
 1. Scale `cluster-version-operator` to zero pods in the web console by visiting `https://<HOSTNAME>/k8s/ns/openshift-cluster-version/deployments/cluster-version-operator` and using the pod donut controls to set pods to zero.  Additionally, pause rollouts via `Actions > Pause Rollouts`.
+1. Scale `authentication-operator` to zero pods in the web console by visiting `https://<HOSTNAME>/k8s/ns/openshift-authentication-operator/deployments/authentication-operator` and using the pod donut controls to set pods to zero.
 1. Delete the existing branding secret:
     ```
     oc delete secret v4-0-config-system-ocp-branding-template -n openshift-authentication
@@ -94,3 +95,4 @@ To test the changes:
 To undo the changes for testing:
 
 1. Resume rollouts of `cluster-version-operator` in the web console by visiting `https://<HOSTNAME>/k8s/ns/openshift-cluster-version/deployments/cluster-version-operator` via `Actions > Resume Rollouts` and scale pods back to one using the pod donut controls.
+1. Visit `https://<HOSTNAME>/k8s/ns/openshift-authentication-operator/deployments/authentication-operator` and use the pod donut controls to set pods to one.
