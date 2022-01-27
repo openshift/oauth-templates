@@ -35,6 +35,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #   - jekyll-feed
 
 collections:
+  rho:
+    output: true
+    name: "Red Hat OpenShift"
   ocp:
     output: true
     name: "Red Hat OpenShift Container Platform"

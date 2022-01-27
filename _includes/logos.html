@@ -4,6 +4,8 @@
   {%- include logo-od.html %}
 {%- elsif collection.label == 'rosa' -%}
   {%- include logo-rosa.html %}
-{%- else  -%}
+{%- elsif collection.label == 'ocp' -%}
   {%- include logo-ocp.html %}
+{%- else  -%}
+  {%- include logo-rho.html %}
 {%- endif -%}
