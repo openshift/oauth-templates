@@ -17,6 +17,7 @@ Github Pages only runs in safe mode, preventing the usage of [symlinks](https://
 1. Install [Yarn](https://yarnpkg.com/lang/en/docs/install).
 1. Run `yarn upgrade @patternfly/patternfly`.
 1. Copy the contents of `node_modules/@patternfly/patternfly` to `_includes/patternfly`.
+1. Delete `_includes/patternfly/package.json` so Dependabot doesn't scan the directory.
 1. Delete `_includes/patternfly/assets` and `_includes/patternfly/icons` as they are not needed.
 1. Commit the changes.
 
