@@ -8,7 +8,7 @@
   "scripts": {
     "build-jekyll": "rm -rf _site && bundle exec jekyll build",
     "clear-styles": "pushd ./_includes/styles && echo -n | tee errors.css index.css login.css providers.css",
-    "generate-styles": "yarn clear-styles && yarn build-jekyll && node generate-styles.js",
+    "generate-styles": "yarn clear-styles && yarn build-jekyll && node generate-styles.mjs",
     "serve-jekyll": "bundle exec jekyll serve"
   },
   "devDependencies": {

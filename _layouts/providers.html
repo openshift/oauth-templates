@@ -2,6 +2,8 @@
 layout: base
 ---
 
+{%- include collection.html -%}
+
 <main class="pf-v6-c-login__main">
   <div class="pf-v6-c-login__main-body">
     {% raw %}{{ if eq (len .Providers) 1}}
