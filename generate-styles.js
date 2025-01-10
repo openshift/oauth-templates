@@ -1,7 +1,7 @@
 import { PurgeCSS } from 'purgecss'
 import fs from 'fs';
 
-/** Should match the files in ./_layouts minus compress */
+/** Should match the files in ./_layouts minus compress and base */
 const layouts = ["errors", "login", "providers", "index"];
 
 /** 

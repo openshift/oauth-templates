@@ -1,39 +1,22 @@
 ---
-layout: compress
+layout: base
 ---
 
-{%- include collection.html -%}
-<!DOCTYPE html>
-<html lang="en-us" data-test-id="login" class="pf-v6-theme-dark">
-  {% include head.html %}
-
-  <body>
-    <div class="pf-v6-c-background-image"></div>
-    <div class="pf-v6-c-login">
-      <div class="pf-v6-c-login__container">
-        <header class="pf-v6-c-login__header">
-          {% include logos.html %}
-        </header>
-        <main class="pf-v6-c-login__main">
-          <div class="pf-v6-c-login__main-body">
-            {% raw %}{{ if eq (len .Providers) 1}}
-            <a class="pf-v6-c-button pf-m-primary pf-m-block" href="{{ (index .Providers 0).URL }}">{{ .Locale.LogIn }}</a>
-            {{ else }}
-            <h1 class="pf-v6-c-title pf-m-3xl">{{ .Locale.LogInWith }}</h1>
-            <ul>
-              {{ $logInWith := .Locale.LogInWith }}
-              {{ range $provider := .Providers }}
-              <li class="idp">
-                <a href="{{$provider.URL}}" class="pf-v6-c-button pf-m-secondary pf-m-block"
-                  title="{{ $logInWith }} {{$provider.Name}}">{{$provider.Name}}</a>
-              </li>
-              {{ end }}
-            </ul>
-            {{ end }}{% endraw %}
-          </div>
-        </main>
-      </div>
-    </div>
-  </body>
-
-</html>
+<main class="pf-v6-c-login__main">
+  <div class="pf-v6-c-login__main-body">
+    {% raw %}{{ if eq (len .Providers) 1}}
+    <a class="pf-v6-c-button pf-m-primary pf-m-block" href="{{ (index .Providers 0).URL }}">{{ .Locale.LogIn }}</a>
+    {{ else }}
+    <h1 class="pf-v6-c-title pf-m-3xl">{{ .Locale.LogInWith }}</h1>
+    <ul>
+      {{ $logInWith := .Locale.LogInWith }}
+      {{ range $provider := .Providers }}
+      <li class="idp">
+        <a href="{{$provider.URL}}" class="pf-v6-c-button pf-m-secondary pf-m-block"
+          title="{{ $logInWith }} {{$provider.Name}}">{{$provider.Name}}</a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ end }}{% endraw %}
+  </div>
+</main>

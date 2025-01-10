@@ -1,0 +1,30 @@
+---
+layout: compress
+---
+
+{%- include collection.html -%}
+<!DOCTYPE html>
+<html lang="en-us" data-test-id="login">
+  {% include head.html %}
+
+  <body>
+    <div class="pf-v6-c-background-image"></div>
+    <div class="pf-v6-c-login">
+      <div class="pf-v6-c-login__container">
+        <header class="pf-v6-c-login__header">
+          {% include logos.html %}
+        </header>
+        {{ content }}
+    </div>
+  </div>
+  <script>
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList = "pf-v6-theme-dark";
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        document.documentElement.classList.toggle("pf-v6-theme-dark", event.matches);
+    });
+  </script>
+</body>
+</html>

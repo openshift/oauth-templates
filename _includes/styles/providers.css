@@ -52,11 +52,6 @@ body) {
   list-style: none;
 }
 
-:where(img) {
-  max-width: 100%;
-  height: auto;
-}
-
 :where(a) {
   color: var(--pf-t--global--text--color--link--default);
   text-decoration: var(--pf-t--global--text-decoration--link--line--default);
