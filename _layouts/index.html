@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html lang="en-us">
   <title>{{site.title}}</title>
@@ -5,19 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {%- capture styles -%}
     {%- include fonts.scss -%}
-    {%- include patternfly/sass-utilities/functions.scss -%}
-    {%- include patternfly/sass-utilities/colors.scss -%}
-    {%- include patternfly/sass-utilities/scss-variables.scss -%}
-    {%- include patternfly/sass-utilities/mixins.scss -%}
-    {%- include patternfly/_variables.scss -%}
-    {%- include patternfly/_shield-inheritable.scss -%}
-    {%- include patternfly/_shield-noninheritable.scss -%}
+
     body {
       margin: 20px;
     }
   {%- endcapture -%}
   <style>
-    {{ styles | scssify }}
+    {{ styles }}
   </style>
   <body class="pf-m-redhat-font">
     <div class="pf-c-page">
