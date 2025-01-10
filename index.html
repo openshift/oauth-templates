@@ -2,11 +2,11 @@
 layout: index
 ---
 
-<h1>{{site.title}}</h1>
+<h1 class="pf-v6-c-title pf-m-h1 pf-m-page-title">{{site.title}}</h1>
 {% for collection in site.collections %}
   {% if collection.label != "posts" %}
-  <h2>{{ collection.name }}</h2>
-  <ul>
+  <h2 class="pf-v6-c-title pf-m-h2">{{ collection.name }}</h2>
+  <ul class="pf-v6-c-list">
     {% for doc in collection.docs %}
     <li>
       <a href="{{ doc.url | remove_first:'/' }}">{{ doc.layout }}</a>
