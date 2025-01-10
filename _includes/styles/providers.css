@@ -1,4 +1,4 @@
-@charset "UTF-8";
+ @charset "UTF-8";
 :where(html,
 body,
 p,
@@ -557,4 +557,6 @@ body) {
   font-size: var(--pf-v6-c-title--m-3xl--FontSize);
   font-weight: var(--pf-v6-c-title--m-3xl--FontWeight);
   line-height: var(--pf-v6-c-title--m-3xl--LineHeight);
+} .pf-v6-u-pt-lg {
+  padding-block-start: var(--pf-t--global--spacer--lg) !important;
 }

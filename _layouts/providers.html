@@ -13,7 +13,7 @@ layout: base
     <ul>
       {{ $logInWith := .Locale.LogInWith }}
       {{ range $provider := .Providers }}
-      <li class="idp">
+      <li class="pf-v6-u-pt-lg">
         <a href="{{$provider.URL}}" class="pf-v6-c-button pf-m-secondary pf-m-block"
           title="{{ $logInWith }} {{$provider.Name}}">{{$provider.Name}}</a>
       </li>

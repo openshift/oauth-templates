@@ -11,20 +11,26 @@ const layouts = ["errors", "login", "providers", "index"];
  */
 const removeFontFace = css => css.replace(/@font-face[^{]*{([^{}]|{[^{}]*})*}/gi,'');
 
-const purgePromises = layouts.map(async (layout) => {
+/**
+ * Since GH pages + Jekyll does not support PurgeCSS, we pre-generate the CSS files.
+ * This script should be run after the site is built. After running this script,
+ * make sure to build the site again to include the generated CSS files.
+ */
+const cssForLayouts = layouts.map(async (layout) => {
     return new PurgeCSS().purge({
         content: [`./_site/**/${layout}.html`, `./_site/${layout}.html'`],
-        css: ['./node_modules/@patternfly/patternfly/patternfly.css'],
+        css: ['./node_modules/@patternfly/patternfly/{patternfly,patternfly-addons}.css'],
         keyframes: true,
-        variables: true,
-        safelist: ['.pf-v6-theme-dark']
-    }).then(purgeCSSResult => {
+        variables: true
+    }).then(purgeResult => {
+        // Concatenate all the purged CSS files into one
+        const css = purgeResult.reduce((acc, result) => `${acc} ${result['css']}`, '');
+
         fs.writeFileSync(
             `./_includes/styles/${layout}.css`,
-            /** There is only one CSS file (PatternFly.css) so the result array is always length 1 */
-            removeFontFace(purgeCSSResult[0]['css'])
+            removeFontFace(css)
         );
     });
 });
 
-await Promise.all(purgePromises);
+await Promise.all(cssForLayouts);

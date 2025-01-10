@@ -1,11 +1,15 @@
 <head>
     <title>
-      {% if page.layout == 'errors' %}
-        {% raw %}{{ .Locale.Error }}{% endraw %}
+      {% if collection == nil %}
+        {{ site.title }}
       {% else %}
-        {% raw %}{{ .Locale.LogIn }}{% endraw %}
+        {% if page.layout == 'errors' %}
+          {% raw %}{{ .Locale.Error }}{% endraw %}
+        {% else %}
+          {% raw %}{{ .Locale.LogIn }}{% endraw %}
+        {% endif %}
+         · {{ collection.name }}
       {% endif %}
-       · {{ collection.name }}
     </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +21,14 @@
 
     {%- capture styles -%}
       {% case page.layout %}
-      
-      {% when 'errors' %}
+
+      {% when 'base' %}
+        {% include styles/index.css %}
+
+        {% when 'errors' %}
         {% include styles/errors.css %}
-      {% when 'login' %}
+
+        {% when 'login' %}
         {% include styles/login.css %}
 
         .error-placeholder {
@@ -28,10 +36,7 @@
         }
       {% when 'providers' %}
         {% include styles/providers.css %}
-      
-        .idp {
-          margin: 24px 0 0;
-        }
+
       {% endcase %}
 
       {% include fonts.scss %}
