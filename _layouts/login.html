@@ -9,7 +9,7 @@ layout: base
     <h1 class="pf-v6-c-title pf-m-3xl">{{ .Locale.LogInToYourAccount }}</h1>
   </header>
   <div class="pf-v6-c-login__main-body">
-    <form class="pf-v6-c-form" novalidate action="{{ .Action }}" method="POST">
+    <form class="pf-v6-c-form" action="{{ .Action }}" method="POST" id="co-login-form">
       <input type="hidden" name="{{ .Names.Then }}" value="{{ .Values.Then }}">
       <input type="hidden" name="{{ .Names.CSRF }}" value="{{ .Values.CSRF }}">
       <div class="pf-v6-c-form__helper-text" aria-live="polite">
@@ -34,7 +34,7 @@ layout: base
             class="pf-v6-c-form__label-required" aria-hidden="true">&#42;</span></label>
         <span class="pf-v6-c-form-control pf-m-required">
           <input required type="text" id="inputUsername" name="{{ .Names.Username }}"
-            value="{{ .Values.Username }}" />
+            value="{{ .Values.Username }}" autofocus />
         </span>
       </div>
       <div class="pf-v6-c-form__group"><label class="pf-v6-c-form__label" for="inputPassword">
@@ -45,8 +45,16 @@ layout: base
         </span>
       </div>
       <div class="pf-v6-c-form__group pf-m-action">
-        <button class="pf-v6-c-button pf-m-block pf-m-primary" type="submit">
-          <span class="pf-v6-c-button__text">{{ .Locale.LogIn }}</span>
+        <button class="pf-m-progress pf-v6-c-button pf-m-block pf-m-primary" type="submit" id="co-login-button">
+          <span class="pf-v6-c-button__text">
+            <span class="pf-v6-c-button__progress" style="inset-inline-start: unset; margin-inline-start: calc(-1.5 * var(--pf-t--global--icon--size--lg))">
+              <svg class="pf-v6-c-spinner pf-m-md pf-v6-u-hidden" role="progressbar" viewBox="0 0 100 100"
+                aria-label="Loading...">
+                <circle class="pf-v6-c-spinner__path" cx="50" cy="50" r="45" fill="none" />
+              </svg>
+            </span>
+            {{ .Locale.LogIn }}
+          </span>
         </button>
       </div>
     </form>
@@ -55,3 +63,32 @@ layout: base
 <footer class="pf-v6-c-login__footer">
   <p>{% raw %}{{ .Locale.WelcomeTo }}{% endraw %} {{ collection.name }}</p>
 </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    const loginButton = document.getElementById('co-login-button');
+    const loginForm = document.getElementById('co-login-form');
+
+    loginForm.addEventListener('submit', () => {
+      loginButton.querySelector('.pf-v6-c-spinner').classList.remove('pf-v6-u-hidden');
+      loginButton.classList.add('pf-m-in-progress');
+      loginButton.disabled = true;
+    });
+
+    const checkFormValidity = () => {
+      const isValid = loginForm.checkValidity();
+      loginButton.disabled = !isValid;
+      if (isValid) {
+        loginButton.classList.remove('pf-m-in-progress');
+        loginButton.querySelector('.pf-v6-c-spinner').classList.add('pf-v6-u-hidden');
+      }
+    };
+
+    checkFormValidity();
+
+    loginForm.addEventListener('change', checkFormValidity);
+    document.getElementById('inputUsername').addEventListener('input', checkFormValidity);
+    document.getElementById('inputPassword').addEventListener('input', checkFormValidity);
+    window.addEventListener('pageshow', checkFormValidity);
+  });
+</script>
