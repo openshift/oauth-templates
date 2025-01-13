@@ -67,14 +67,12 @@ To undo the changes for testing:
 1. Remove the changes from step 2 above at `https://<HOSTNAME>/k8s/cluster/config.openshift.io~v1~OAuth/cluster/yaml`.
 2. Delete the secrets created in step 1 above.
 
-### Red Hat OpenShift Container Platform
+### Red Hat OpenShift
 
-The OCP branded templates take advantage of the override mechanism by providing customized templates via secrets via the following method:
+The RHO branded templates take advantage of the override mechanism by providing customized templates via secrets via the following method:
 
-1. Copy a [Base64-encoded](https://www.base64encode.org/) version of the generated source in `_site/ocp/errors.html` to https://github.com/openshift/cluster-authentication-operator/blob/master/bindata/oauth-openshift/branding-secret.yaml#L9.
-2. Copy a [Base64-encoded](https://www.base64encode.org/) version of the generated source in `_site/ocp/login.html` to https://github.com/openshift/cluster-authentication-operator/blob/master/bindata/oauth-openshift/branding-secret.yaml#L7.
-3. Copy a [Base64-encoded](https://www.base64encode.org/) version of the generated source in `_site/ocp/providers.html` to https://github.com/openshift/cluster-authentication-operator/blob/master/bindata/oauth-openshift/branding-secret.yaml#L8.
-4. Submit a pull request to https://github.com/openshift/cluster-authentication-operator containing the copied changes.
+1. Copy the output from `yarn generate-branding-secret` to https://github.com/openshift/cluster-authentication-operator/blob/master/bindata/oauth-openshift/branding-secret.yaml.
+2. Submit a pull request to https://github.com/openshift/cluster-authentication-operator containing the copied changes.
 
 To test the changes:
 

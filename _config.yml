@@ -70,6 +70,8 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - generate-styles.js
+  - generate-branding-secret.mjs
+  - generate-styles.mjs
+  - branding-secret.yaml
   - package.json
   - yarn.lock

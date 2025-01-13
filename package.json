@@ -9,7 +9,9 @@
     "build-jekyll": "rm -rf _site && bundle exec jekyll build",
     "clear-styles": "pushd ./_includes/styles && echo -n | tee errors.css index.css login.css providers.css",
     "generate-styles": "yarn clear-styles && yarn build-jekyll && node generate-styles.mjs",
-    "serve-jekyll": "bundle exec jekyll serve"
+    "rebuild": "yarn generate-styles && yarn build-jekyll",
+    "serve-jekyll": "bundle exec jekyll serve",
+    "generate-branding-secret": "yarn rebuild && rm -f branding-secret.yaml && node generate-branding-secret.mjs rho"
   },
   "devDependencies": {
     "@patternfly/patternfly": "^6.1.0",
