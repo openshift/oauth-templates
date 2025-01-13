@@ -139,6 +139,7 @@ button) {
   --pf-t--global--text-decoration--line--200: underline;
   --pf-t--global--timing-function--200: cubic-bezier(.4, 0, .2, 1);
   --pf-t--global--background--color--100: var(--pf-t--color--white);
+  --pf-t--global--background--color--200: var(--pf-t--color--gray--10);
   --pf-t--global--border--color--100: var(--pf-t--color--gray--30);
   --pf-t--global--border--radius--large: var(--pf-t--global--border--radius--400);
   --pf-t--global--border--radius--pill: var(--pf-t--global--border--radius--500);
@@ -187,6 +188,7 @@ button) {
   --pf-t--global--text-decoration--link--line--hover: var(--pf-t--global--text-decoration--line--200);
   --pf-t--global--background--color--disabled--default: var(--pf-t--global--color--disabled--100);
   --pf-t--global--background--color--primary--default: var(--pf-t--global--background--color--100);
+  --pf-t--global--background--color--secondary--default: var(--pf-t--global--background--color--200);
   --pf-t--global--border--color--default: var(--pf-t--global--border--color--100);
   --pf-t--global--border--color--hover: var(--pf-t--global--color--brand--100);
   --pf-t--global--color--brand--default: var(--pf-t--global--color--brand--200);
@@ -226,6 +228,7 @@ button) {
 }
 
 :root:where(.pf-v6-theme-dark) {
+  --pf-t--global--dark--background--color--100: var(--pf-t--color--gray--95);
   --pf-t--global--dark--background--color--200: var(--pf-t--color--gray--80);
   --pf-t--global--dark--background--color--300: var(--pf-t--color--gray--70);
   --pf-t--global--dark--border--color--200: var(--pf-t--color--gray--40);
@@ -245,6 +248,7 @@ button) {
   --pf-t--global--background--color--control--default: var(--pf-t--global--dark--background--color--300);
   --pf-t--global--background--color--disabled--default: var(--pf-t--global--dark--color--disabled--100);
   --pf-t--global--background--color--primary--default: var(--pf-t--global--dark--background--color--200);
+  --pf-t--global--background--color--secondary--default: var(--pf-t--global--dark--background--color--100);
   --pf-t--global--border--color--default: var(--pf-t--global--dark--border--color--200);
   --pf-t--global--border--color--hover: var(--pf-t--global--dark--color--brand--100);
   --pf-t--global--color--brand--default: var(--pf-t--global--dark--color--brand--100);

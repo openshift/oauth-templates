@@ -104,6 +104,7 @@ body) {
   --pf-t--global--spacer--700: 4rem;
   --pf-t--global--text-decoration--line--200: underline;
   --pf-t--global--background--color--100: var(--pf-t--color--white);
+  --pf-t--global--background--color--200: var(--pf-t--color--gray--10);
   --pf-t--global--border--color--100: var(--pf-t--color--gray--30);
   --pf-t--global--border--radius--large: var(--pf-t--global--border--radius--400);
   --pf-t--global--color--status--danger--100: var(--pf-t--color--red-orange--60);
@@ -127,6 +128,7 @@ body) {
   --pf-t--global--text-decoration--link--line--default: var(--pf-t--global--text-decoration--line--200);
   --pf-t--global--text-decoration--link--line--hover: var(--pf-t--global--text-decoration--line--200);
   --pf-t--global--background--color--primary--default: var(--pf-t--global--background--color--100);
+  --pf-t--global--background--color--secondary--default: var(--pf-t--global--background--color--200);
   --pf-t--global--border--color--default: var(--pf-t--global--border--color--100);
   --pf-t--global--color--status--danger--default: var(--pf-t--global--color--status--danger--100);
   --pf-t--global--font--size--body--default: var(--pf-t--global--font--size--sm);
@@ -139,6 +141,7 @@ body) {
 }
 
 :root:where(.pf-v6-theme-dark) {
+  --pf-t--global--dark--background--color--100: var(--pf-t--color--gray--95);
   --pf-t--global--dark--background--color--200: var(--pf-t--color--gray--80);
   --pf-t--global--dark--border--color--200: var(--pf-t--color--gray--40);
   --pf-t--global--dark--color--status--danger--100: var(--pf-t--color--red-orange--50);
@@ -147,6 +150,7 @@ body) {
   --pf-t--global--dark--text--color--link--100: var(--pf-t--color--blue--20);
   --pf-t--global--dark--text--color--link--200: var(--pf-t--color--blue--10);
   --pf-t--global--background--color--primary--default: var(--pf-t--global--dark--background--color--200);
+  --pf-t--global--background--color--secondary--default: var(--pf-t--global--dark--background--color--100);
   --pf-t--global--border--color--default: var(--pf-t--global--dark--border--color--200);
   --pf-t--global--color--status--danger--default: var(--pf-t--global--dark--color--status--danger--100);
   --pf-t--global--icon--color--regular: var(--pf-t--global--dark--icon--color--100);

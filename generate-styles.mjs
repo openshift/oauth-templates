@@ -21,7 +21,14 @@ const cssForLayouts = layouts.map(async (layout) => {
         content: [`./_site/**/${layout}.html`, `./_site/${layout}.html'`],
         css: ['./node_modules/@patternfly/patternfly/{patternfly,patternfly-addons}.css'],
         keyframes: true,
-        variables: true
+        variables: true,
+        safelist: {
+            variables: [
+                '--pf-t--global--background--color--secondary--default',
+                '--pf-t--global--background--color--200',
+                '--pf-t--global--dark--background--color--100'
+            ]
+        },
     }).then(purgeResult => {
         // Concatenate all the purged CSS files into one
         const css = purgeResult.reduce((acc, result) => `${acc} ${result['css']}`, '');
