@@ -1,23 +1,17 @@
 ---
-layout: base
+layout: index
 ---
 
-<section class="pf-v6-l-flex">
-  <h1 class="pf-v6-c-title pf-m-h1 pf-m-page-title">{{site.title}}</h1>
-  {% for collection in site.collections %}
+<h1 class="pf-v6-c-title pf-m-h1 pf-m-page-title">{{site.title}}</h1>
+{% for collection in site.collections %}
   {% if collection.label != "posts" %}
-  <div class="pf-v6-c-card pf-m-compact pf-v6-l-flex__item">
-    <div class="pf-v6-c-card__title">
-      <h2 class="pf-v6-c-card__title-text">{{ collection.name }}</h2>
-    </div>
-    <div class="pf-v6-c-card__footer">
-      {% for doc in collection.docs %}
-        <a class="pf-v6-c-button pf-m-secondary" href="{{ doc.url | remove_first:'/' }}">
-          <span class="pf-v6-c-button__text">{{ doc.layout }}</span>
-        </a>
-      {% endfor %}
-    </div>
-  </div>
+  <h2 class="pf-v6-c-title pf-m-h2">{{ collection.name }}</h2>
+  <ul class="pf-v6-c-list">
+    {% for doc in collection.docs %}
+    <li>
+      <a href="{{ doc.url | remove_first:'/' }}">{{ doc.layout }}</a>
+    </li>
+    {% endfor %}
+  </ul>
   {% endif %}
-  {% endfor %}
-</section>
+{% endfor %}

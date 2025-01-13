@@ -1,0 +1,33 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+  <title>{{site.title}}</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {%- capture styles -%}
+    {%- include fonts.scss -%}
+    {%- include styles/index.css -%}
+
+    body {
+      margin: 20px;
+    }
+  {%- endcapture -%}
+  <style>
+    {{ styles }}
+  </style>
+  <body>
+    {{ content }}
+    <script>
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList = "pf-v6-theme-dark";
+      }
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+          document.documentElement.classList.toggle("pf-v6-theme-dark", event.matches);
+      });
+    </script>
+  </body>
+</html>
