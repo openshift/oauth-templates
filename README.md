@@ -6,9 +6,11 @@ View the templates at https://openshift.github.io/oauth-templates/.
 
 ## Development
 
-1. Install [Jekyll](https://jekyllrb.com/docs/installation/).
-1. Run `bundle install`.
-1. Run `bundle exec jekyll serve`.
+1. Install [Jekyll](https://jekyllrb.com/docs/installation/) and run `bundle install`.
+1. Install [Yarn](https://yarnpkg.com/lang/en/docs/install) and run `yarn install`.
+   - Note that certain dependencies require Node.js 20+. You can install [n](https://www.npmjs.com/package/n) to switch between node versions.
+1. Run `yarn serve-jekyll`
+   - Note that `yarn generate-styles` will have to be run if there are new PatternFly classes added to the HTML.
 
 ### Updating PatternFly
 
@@ -17,7 +19,7 @@ Github Pages only runs in safe mode, preventing the usage of [symlinks](https://
 1. Install [Jekyll](https://jekyllrb.com/docs/installation/) and run `bundle install`.
 1. Install [Yarn](https://yarnpkg.com/lang/en/docs/install) and run `yarn install`.
 1. Run `yarn upgrade @patternfly/patternfly`.
-1. Run `yarn generate-styles`
+1. Run `yarn generate-styles`.
 1. Verify there are no regressions by running `yarn serve-jekyll`. Note that the CSS will not be automatically updated, so if you make changes to the HTML, you will need to run `yarn generate-styles` again.
 1. Commit the changes.
 

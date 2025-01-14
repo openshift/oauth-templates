@@ -7,10 +7,10 @@
   "license": "Apache-2.0",
   "scripts": {
     "build-jekyll": "rm -rf _site && bundle exec jekyll build",
-    "clear-styles": "pushd ./_includes/styles && echo -n | tee errors.css index.css login.css providers.css",
+    "clear-styles": "cd ./_includes/styles && rm -f *.css && touch errors.css index.css login.css providers.css",
     "generate-styles": "yarn clear-styles && yarn build-jekyll && node generate-styles.mjs",
     "rebuild": "yarn generate-styles && yarn build-jekyll",
-    "serve-jekyll": "bundle exec jekyll serve",
+    "serve-jekyll": "yarn generate-styles && bundle exec jekyll serve",
     "generate-branding-secret": "yarn rebuild && rm -f branding-secret.yaml && node generate-branding-secret.mjs rho"
   },
   "devDependencies": {
