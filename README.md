@@ -21,6 +21,7 @@ Github Pages only runs in safe mode, preventing the usage of [symlinks](https://
 1. Run `yarn upgrade @patternfly/patternfly`.
 1. Run `yarn generate-styles`.
 1. Verify there are no regressions by running `yarn serve-jekyll`. Note that the CSS will not be automatically updated, so if you make changes to the HTML, you will need to run `yarn generate-styles` again.
+1. Make manual changes to the generated CSS if needed.
 1. Commit the changes.
 
 ## Deployment
