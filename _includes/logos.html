@@ -1,11 +1,14 @@
-{%- if collection.label == 'okd' -%}
+{% case collection.label %}
+{%- when 'okd' -%}
   {%- include logo-okd.html %}
-{%- elsif collection.label == 'od' -%}
+{%- when 'od' -%}
   {%- include logo-od.html %}
-{%- elsif collection.label == 'rosa' -%}
+{%- when 'rosa' -%}
   {%- include logo-rosa.html %}
-{%- elsif collection.label == 'ocp' -%}
+{%- when 'ocp' -%}
   {%- include logo-ocp.html %}
-{%- else  -%}
+{%- when 'rho' -%}
   {%- include logo-rho.html %}
-{%- endif -%}
+{%- else -%}
+  <!-- No logo -->
+{% endcase %}

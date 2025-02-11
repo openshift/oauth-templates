@@ -1,0 +1,204 @@
+ @charset "UTF-8";
+:where(html,
+body,
+p,
+ul,
+li,
+h1,
+h2) {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scrollbar-color: var(--pf-t--global--border--color--default) transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--pf-t--global--border--color--default);
+  border-radius: var(--pf-t--global--spacer--xs);
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  max-width: var(--pf-t--global--spacer--sm);
+  max-height: var(--pf-t--global--spacer--sm);
+}
+
+:where(html,
+body) {
+  height: 100%;
+}
+
+:where(body) {
+  font-family: var(--pf-t--global--font--family--body);
+  font-size: var(--pf-t--global--font--size--body--default);
+  font-weight: var(--pf-t--global--font--weight--body--default);
+  line-height: var(--pf-t--global--font--line-height--body);
+  color: var(--pf-t--global--text--color--regular);
+}
+
+:where(h1,
+h2) {
+  font-size: 100%;
+  font-weight: var(--pf-t--global--font--weight--body--default);
+}
+
+:where(ul) {
+  list-style: none;
+}
+
+:where(a) {
+  color: var(--pf-t--global--text--color--link--default);
+  text-decoration: var(--pf-t--global--text-decoration--link--line--default);
+}
+
+:where(a:hover, a:focus) {
+  color: var(--pf-t--global--text--color--link--hover);
+  text-decoration: var(--pf-t--global--text-decoration--link--line--hover);
+}
+
+:where(a) {
+  cursor: pointer;
+}
+
+:where(.pf-v6-theme-dark) {
+  color-scheme: dark;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  --pf-t--color--blue--10: #e0f0ff;
+  --pf-t--color--blue--20: #b9dafc;
+  --pf-t--color--blue--50: #0066cc;
+  --pf-t--color--blue--60: #004d99;
+  --pf-t--color--gray--30: #c7c7c7;
+  --pf-t--color--gray--40: #a3a3a3;
+  --pf-t--color--gray--95: #151515;
+  --pf-t--color--white: #ffffff;
+  --pf-t--global--font--family--100: "Red Hat Text", "RedHatText", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif;
+  --pf-t--global--font--family--200: "Red Hat Display", "RedHatDisplay", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif;
+  --pf-t--global--font--line-height--100: 1.3;
+  --pf-t--global--font--line-height--200: 1.5;
+  --pf-t--global--font--size--200: 0.875rem;
+  --pf-t--global--font--size--500: 1.25rem;
+  --pf-t--global--font--size--600: 1.5rem;
+  --pf-t--global--font--weight--100: 400;
+  --pf-t--global--font--weight--300: 500;
+  --pf-t--global--font--weight--400: 700;
+  --pf-t--global--spacer--100: 0.25rem;
+  --pf-t--global--spacer--200: 0.5rem;
+  --pf-t--global--spacer--400: 1.5rem;
+  --pf-t--global--text-decoration--line--200: underline;
+  --pf-t--global--background--color--200: var(--pf-t--color--gray--10);
+  --pf-t--global--border--color--100: var(--pf-t--color--gray--30);
+  --pf-t--global--font--family--body: var(--pf-t--global--font--family--100);
+  --pf-t--global--font--family--heading: var(--pf-t--global--font--family--200);
+  --pf-t--global--font--line-height--body: var(--pf-t--global--font--line-height--200);
+  --pf-t--global--font--line-height--heading: var(--pf-t--global--font--line-height--100);
+  --pf-t--global--font--size--2xl: var(--pf-t--global--font--size--600);
+  --pf-t--global--font--size--sm: var(--pf-t--global--font--size--200);
+  --pf-t--global--font--size--xl: var(--pf-t--global--font--size--500);
+  --pf-t--global--font--weight--body--default: var(--pf-t--global--font--weight--100);
+  --pf-t--global--font--weight--heading--bold: var(--pf-t--global--font--weight--400);
+  --pf-t--global--font--weight--heading--default: var(--pf-t--global--font--weight--300);
+  --pf-t--global--spacer--lg: var(--pf-t--global--spacer--400);
+  --pf-t--global--spacer--sm: var(--pf-t--global--spacer--200);
+  --pf-t--global--spacer--xs: var(--pf-t--global--spacer--100);
+  --pf-t--global--text--color--100: var(--pf-t--color--gray--95);
+  --pf-t--global--text--color--link--100: var(--pf-t--color--blue--50);
+  --pf-t--global--text--color--link--200: var(--pf-t--color--blue--60);
+  --pf-t--global--text-decoration--link--line--default: var(--pf-t--global--text-decoration--line--200);
+  --pf-t--global--text-decoration--link--line--hover: var(--pf-t--global--text-decoration--line--200);
+  --pf-t--global--background--color--secondary--default: var(--pf-t--global--background--color--200);
+  --pf-t--global--border--color--default: var(--pf-t--global--border--color--100);
+  --pf-t--global--font--size--body--default: var(--pf-t--global--font--size--sm);
+  --pf-t--global--font--size--heading--h1: var(--pf-t--global--font--size--2xl);
+  --pf-t--global--font--size--heading--h2: var(--pf-t--global--font--size--xl);
+  --pf-t--global--text--color--link--default: var(--pf-t--global--text--color--link--100);
+  --pf-t--global--text--color--link--hover: var(--pf-t--global--text--color--link--200);
+  --pf-t--global--text--color--regular: var(--pf-t--global--text--color--100);
+  --pf-t--global--list-style: disc outside;
+}
+
+:root:where(.pf-v6-theme-dark) {
+  --pf-t--global--dark--background--color--100: var(--pf-t--color--gray--95);
+  --pf-t--global--dark--border--color--200: var(--pf-t--color--gray--40);
+  --pf-t--global--dark--text--color--100: var(--pf-t--color--white);
+  --pf-t--global--dark--text--color--link--100: var(--pf-t--color--blue--20);
+  --pf-t--global--dark--text--color--link--200: var(--pf-t--color--blue--10);
+  --pf-t--global--background--color--secondary--default: var(--pf-t--global--dark--background--color--100);
+  --pf-t--global--border--color--default: var(--pf-t--global--dark--border--color--200);
+  --pf-t--global--text--color--link--default: var(--pf-t--global--dark--text--color--link--100);
+  --pf-t--global--text--color--link--hover: var(--pf-t--global--dark--text--color--link--200);
+  --pf-t--global--text--color--regular: var(--pf-t--global--dark--text--color--100);
+}
+
+:root {
+}
+
+.pf-v6-c-list {
+  --pf-v6-c-list--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  --pf-v6-c-list--ul--ListStyle: var(--pf-t--global--list-style);
+  --pf-v6-c-list--Gap: var(--pf-t--global--spacer--sm);
+  --pf-v6-c-list--nested--PaddingBlockStart: var(--pf-v6-c-list--Gap);
+}
+
+.pf-v6-c-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pf-v6-c-list--Gap);
+  padding-inline-start: var(--pf-v6-c-list--PaddingInlineStart);
+}
+.pf-v6-c-list .pf-v6-c-list {
+  padding-block-start: var(--pf-v6-c-list--nested--PaddingBlockStart);
+}
+ul.pf-v6-c-list {
+  list-style: var(--pf-v6-c-list--ul--ListStyle);
+}
+
+.pf-v6-c-title {
+  --pf-v6-c-title--FontFamily: var(--pf-t--global--font--family--heading);
+  --pf-v6-c-title--m-h1--LineHeight: var(--pf-t--global--font--line-height--heading);
+  --pf-v6-c-title--m-h1--FontSize: var(--pf-t--global--font--size--heading--h1);
+  --pf-v6-c-title--m-h1--FontWeight: var(--pf-t--global--font--weight--heading--default);
+  --pf-v6-c-title--m-h2--LineHeight: var(--pf-t--global--font--line-height--heading);
+  --pf-v6-c-title--m-h2--FontSize: var(--pf-t--global--font--size--heading--h2);
+  --pf-v6-c-title--m-h2--FontWeight: var(--pf-t--global--font--weight--heading--default);
+  --pf-v6-c-title--m-page-title--FontWeight: var(--pf-t--global--font--weight--heading--bold);
+}
+
+.pf-v6-c-title {
+  font-family: var(--pf-v6-c-title--FontFamily);
+  word-break: break-word;
+}
+.pf-v6-c-title.pf-m-h1 {
+  font-size: var(--pf-v6-c-title--m-h1--FontSize);
+  font-weight: var(--pf-v6-c-title--m-h1--FontWeight);
+  line-height: var(--pf-v6-c-title--m-h1--LineHeight);
+}
+.pf-v6-c-title.pf-m-h2 {
+  font-size: var(--pf-v6-c-title--m-h2--FontSize);
+  font-weight: var(--pf-v6-c-title--m-h2--FontWeight);
+  line-height: var(--pf-v6-c-title--m-h2--LineHeight);
+}
+.pf-v6-c-title.pf-m-page-title {
+  font-weight: var(--pf-v6-c-title--m-page-title--FontWeight);
+}
+ 
