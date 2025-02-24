@@ -937,7 +937,6 @@ button) {
   font-size: var(--pf-v6-c-title--m-md--FontSize);
   font-weight: var(--pf-v6-c-title--m-md--FontWeight);
   line-height: var(--pf-v6-c-title--m-md--LineHeight);
-}
- .pf-v6-u-hidden {
+} .pf-v6-u-hidden {
   display: none !important;
 }
