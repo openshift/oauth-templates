@@ -1,4 +1,4 @@
-# OpenShift oauth templates
+# OpenShift OAuth templates
 
 The upstream source for the login, errors, and providers HTML templates for OpenShift.
 
