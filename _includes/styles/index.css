@@ -56,12 +56,12 @@ h2) {
 
 :where(a) {
   color: var(--pf-t--global--text--color--link--default);
-  text-decoration: var(--pf-t--global--text-decoration--link--line--default);
+  text-decoration-line: var(--pf-t--global--text-decoration--link--line--default);
 }
 
 :where(a:hover, a:focus) {
   color: var(--pf-t--global--text--color--link--hover);
-  text-decoration: var(--pf-t--global--text-decoration--link--line--hover);
+  text-decoration-line: var(--pf-t--global--text-decoration--link--line--hover);
 }
 
 :where(a) {
@@ -88,6 +88,7 @@ h2) {
   --pf-t--color--blue--20: #b9dafc;
   --pf-t--color--blue--50: #0066cc;
   --pf-t--color--blue--60: #004d99;
+  --pf-t--color--gray--10: #f2f2f2;
   --pf-t--color--gray--30: #c7c7c7;
   --pf-t--color--gray--40: #a3a3a3;
   --pf-t--color--gray--95: #151515;

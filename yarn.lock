@@ -14,10 +14,10 @@
     wrap-ansi "^8.1.0"
     wrap-ansi-cjs "npm:wrap-ansi@^7.0.0"
 
-"@patternfly/patternfly@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-6.1.0.tgz#bd2374bf293b1c2abdde071700b3d9532ec2dfe6"
-  integrity sha512-w+QazL8NHKkg5j01eotblsswKxQQSYB0CN3yBXQL9ScpHdp/fK8M6TqWbKZNRpf+NqhMxcH/om8eR0N/fDCJqw==
+"@patternfly/patternfly@^6.2.0-prerelease.26":
+  version "6.2.0-prerelease.26"
+  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-6.2.0-prerelease.26.tgz#2479217be92998778bbf2aec15c01e67cf443f2c"
+  integrity sha512-pfcdKL1F2Lya4uWgGa7zmUu0wzny6iD8nKtX5wndyvxUZh8SoaQQIDf+EEw2PquzODsafb8N+VaOkjrRCAFBIQ==
 
 ansi-regex@^5.0.1:
   version "5.0.1"

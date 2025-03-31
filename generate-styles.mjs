@@ -25,6 +25,7 @@ const cssForLayouts = layouts.map(async (layout) => {
         safelist: {
             variables: [
                 '--pf-t--global--background--color--secondary--default',
+                '--pf-t--color--gray--10',
                 '--pf-t--global--background--color--200',
                 '--pf-t--global--dark--background--color--100'
             ]
