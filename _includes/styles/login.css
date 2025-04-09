@@ -62,12 +62,12 @@ input) {
 
 :where(a) {
   color: var(--pf-t--global--text--color--link--default);
-  text-decoration: var(--pf-t--global--text-decoration--link--line--default);
+  text-decoration-line: var(--pf-t--global--text-decoration--link--line--default);
 }
 
 :where(a:hover, a:focus) {
   color: var(--pf-t--global--text--color--link--hover);
-  text-decoration: var(--pf-t--global--text-decoration--link--line--hover);
+  text-decoration-line: var(--pf-t--global--text-decoration--link--line--hover);
 }
 
 :where(a,
@@ -380,6 +380,7 @@ button) {
   --pf-v6-c-button--BorderRadius: var(--pf-t--global--border--radius--pill);
   --pf-v6-c-button--TextDecorationLine: none;
   --pf-v6-c-button--TextDecorationStyle: none;
+  --pf-v6-c-button--TextDecorationColor: currentcolor;
   --pf-v6-c-button--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
   --pf-v6-c-button--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --pf-v6-c-button--TransitionProperty: color, background-color, border-width, border-color, padding;
@@ -388,6 +389,7 @@ button) {
   --pf-v6-c-button--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
   --pf-v6-c-button--hover--TextDecorationLine: none;
   --pf-v6-c-button--hover--TextDecorationStyle: none;
+  --pf-v6-c-button--hover--TextDecorationColor: currentcolor;
   --pf-v6-c-button--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
   --pf-v6-c-button--m-primary--BackgroundColor: var(--pf-t--global--color--brand--default);
   --pf-v6-c-button--m-primary__icon--Color: var(--pf-t--global--icon--color--on-brand--default);
@@ -397,6 +399,7 @@ button) {
   --pf-v6-c-button__progress--Color: var(--pf-v6-c-button__icon--Color);
   --pf-v6-c-button--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --pf-v6-c-button--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --pf-v6-c-button--disabled--TextDecorationColor: currentcolor;
   --pf-v6-c-button__icon--Color: var(--pf-t--global--icon--color--regular);
   --pf-v6-c-button--hover__icon--Color: var(--pf-t--global--icon--color--regular);
   --pf-v6-c-button__progress--width: calc(var(--pf-t--global--icon--size--lg) + var(--pf-t--global--spacer--sm));
@@ -429,7 +432,9 @@ button) {
   line-height: var(--pf-v6-c-button--LineHeight, inherit);
   color: var(--pf-v6-c-button--Color);
   text-align: center;
-  text-decoration: var(--pf-v6-c-button--TextDecorationLine) var(--pf-v6-c-button--TextDecorationStyle);
+  text-decoration-line: var(--pf-v6-c-button--TextDecorationLine);
+  text-decoration-style: var(--pf-v6-c-button--TextDecorationStyle);
+  text-decoration-color: var(--pf-v6-c-button--TextDecorationColor);
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
@@ -471,13 +476,16 @@ button) {
   --pf-v6-c-button--BorderColor: var(--pf-v6-c-button--hover--BorderColor);
   --pf-v6-c-button--BorderWidth: var(--pf-v6-c-button--hover--BorderWidth);
   --pf-v6-c-button__icon--Color: var(--pf-v6-c-button--hover__icon--Color);
-  text-decoration: var(--pf-v6-c-button--hover--TextDecorationLine) var(--pf-v6-c-button--hover--TextDecorationStyle);
+  text-decoration-line: var(--pf-v6-c-button--hover--TextDecorationLine);
+  text-decoration-style: var(--pf-v6-c-button--hover--TextDecorationStyle);
+  text-decoration-color: var(--pf-v6-c-button--hover--TextDecorationColor);
 }
 .pf-v6-c-button:disabled {
   pointer-events: none;
 }
 .pf-v6-c-button:disabled {
   color: var(--pf-v6-c-button--disabled--Color);
+  text-decoration-color: var(--pf-v6-c-button--disabled--TextDecorationColor);
   background-color: var(--pf-v6-c-button--disabled--BackgroundColor);
 }
 .pf-v6-c-button:disabled::after {
@@ -513,12 +521,12 @@ button) {
   --pf-v6-c-form--GridGap: var(--pf-t--global--spacer--gap--group-to-group--vertical--default);
   --pf-v6-c-form__group--Gap: var(--pf-t--global--spacer--gap--group--vertical);
   --pf-v6-c-form__group--m-action--MarginBlockStart: var(--pf-t--global--spacer--xl);
-  --pf-v6-c-form__label--FontSize: var(--pf-t--global--font--size--body--sm);
+  --pf-v6-c-form__label--FontSize: var(--pf-t--global--font--size--body--default);
   --pf-v6-c-form__label--LineHeight: var(--pf-t--global--font--line-height--body);
   --pf-v6-c-form__label--hover--Cursor: pointer;
   --pf-v6-c-form__label-text--FontWeight: var(--pf-t--global--font--weight--body--bold);
   --pf-v6-c-form__label-required--MarginInlineStart: var(--pf-t--global--spacer--xs);
-  --pf-v6-c-form__label-required--FontSize: var(--pf-t--global--font--size--body--sm);
+  --pf-v6-c-form__label-required--FontSize: var(--pf-t--global--font--size--body--default);
   --pf-v6-c-form__label-required--Color: var(--pf-t--global--color--status--danger--default);
   --pf-v6-c-form__helper-text--MarginBlockStart--base: var(--pf-t--global--spacer--xs);
   --pf-v6-c-form__helper-text--MarginBlockStart: var(--pf-v6-c-form__helper-text--MarginBlockStart--base);
@@ -580,17 +588,32 @@ button) {
   --pf-v6-c-form-control--BackgroundColor: var(--pf-t--global--background--color--control--default);
   --pf-v6-c-form-control--Width: 100%;
   --pf-v6-c-form-control--inset--base: var(--pf-t--global--spacer--control--horizontal--default);
-  --pf-v6-c-form-control--PaddingBlockStart: var(--pf-t--global--spacer--control--vertical--default);
-  --pf-v6-c-form-control--PaddingBlockEnd: var(--pf-t--global--spacer--control--vertical--default);
-  --pf-v6-c-form-control--PaddingInlineEnd: var(--pf-v6-c-form-control--inset--base);
-  --pf-v6-c-form-control--PaddingInlineStart: var(--pf-v6-c-form-control--inset--base);
+  --pf-v6-c-form-control--PaddingBlockStart--base: var(--pf-t--global--spacer--control--vertical--default);
+  --pf-v6-c-form-control--PaddingBlockEnd--base: var(--pf-t--global--spacer--control--vertical--default);
+  --pf-v6-c-form-control--PaddingInlineEnd--base: var(--pf-v6-c-form-control--inset--base);
+  --pf-v6-c-form-control--PaddingInlineStart--base: var(--pf-v6-c-form-control--inset--base);
+  --pf-v6-c-form-control--PaddingBlockStart: var(--pf-v6-c-form-control--PaddingBlockStart--base);
+  --pf-v6-c-form-control--PaddingBlockEnd: var(--pf-v6-c-form-control--PaddingBlockEnd--base);
+  --pf-v6-c-form-control--PaddingInlineEnd: var(--pf-v6-c-form-control--PaddingInlineEnd--base);
+  --pf-v6-c-form-control--PaddingInlineStart: var(--pf-v6-c-form-control--PaddingInlineStart--base);
+  --pf-v6-c-form-control__utilities--input--PaddingInlineEnd: var(--pf-v6-c-form-control__input--PaddingInlineEnd);
+  --pf-v6-c-form-control__input--PaddingBlockStart: var(--pf-v6-c-form-control--PaddingBlockStart--base);
+  --pf-v6-c-form-control__input--PaddingBlockEnd: var(--pf-v6-c-form-control--PaddingBlockEnd--base);
+  --pf-v6-c-form-control__input--PaddingInlineEnd: var(--pf-v6-c-form-control--PaddingInlineEnd--base);
+  --pf-v6-c-form-control__input--PaddingInlineStart: var(--pf-v6-c-form-control--PaddingInlineStart--base);
+  --pf-v6-c-form-control__select--PaddingBlockStart: var(--pf-v6-c-form-control--PaddingBlockStart--base);
+  --pf-v6-c-form-control__select--PaddingBlockEnd: var(--pf-v6-c-form-control--PaddingBlockEnd--base);
+  --pf-v6-c-form-control__select--PaddingInlineEnd: var(--pf-v6-c-form-control--PaddingInlineEnd--base);
+  --pf-v6-c-form-control__select--PaddingInlineStart: var(--pf-v6-c-form-control--PaddingInlineStart--base);
   --pf-v6-c-form-control--hover--after--BorderWidth: var(--pf-t--global--border--width--control--hover);
   --pf-v6-c-form-control--hover--after--BorderColor: var(--pf-t--global--border--color--hover);
   --pf-v6-c-form-control--m-error--hover--after--BorderColor: var(--pf-t--global--border--color--status--danger--hover);
   --pf-v6-c-form-control--m-placeholder--Color: var(--pf-t--global--text--color--placeholder);
   --pf-v6-c-form-control--m-error--after--BorderWidth: var(--pf-t--global--border--width--control--default);
   --pf-v6-c-form-control--m-error--after--BorderColor: var(--pf-t--global--border--color--status--danger--default);
-  --pf-v6-c-form-control--m-error--PaddingInlineEnd: calc(var(--pf-v6-c-form-control__icon--FontSize) + var(--pf-v6-c-form-control--inset--base) + var(--pf-v6-c-form-control--ColumnGap));
+  --pf-v6-c-form-control--m-error--PaddingInlineEnd: initial;
+  --pf-v6-c-form-control__input--m-error--PaddingInlineEnd: calc(var(--pf-v6-c-form-control--m-icon--icon--width) + var(--pf-v6-c-form-control--ColumnGap) + var(--pf-v6-c-form-control__utilities--input--PaddingInlineEnd));
+  --pf-v6-c-form-control--m-icon--icon--width: var(--pf-v6-c-form-control--FontSize);
   --pf-v6-c-form-control__icon--FontSize: var(--pf-t--global--icon--size--font--body--default);
 }
 
@@ -644,15 +667,36 @@ button) {
 .pf-v6-c-form-control > :is(input) {
   text-overflow: ellipsis;
 }
+.pf-v6-c-form-control:has(input) {
+  --pf-v6-c-form-control--PaddingBlockStart: var(--pf-v6-c-form-control__input--PaddingBlockStart);
+  --pf-v6-c-form-control--PaddingBlockEnd: var(--pf-v6-c-form-control__input--PaddingBlockEnd);
+  --pf-v6-c-form-control--PaddingInlineStart: var(--pf-v6-c-form-control__input--PaddingInlineStart);
+  --pf-v6-c-form-control--PaddingInlineEnd: var(--pf-v6-c-form-control__input--PaddingInlineEnd);
+}
 .pf-v6-c-form-control.pf-m-error {
-  --pf-v6-c-form-control--PaddingInlineEnd: var(--pf-v6-c-form-control--m-error--PaddingInlineEnd);
   --pf-v6-c-form-control--after--BorderColor: var(--pf-v6-c-form-control--m-error--after--BorderColor);
   --pf-v6-c-form-control--hover--after--BorderColor: var(--pf-v6-c-form-control--m-error--hover--after--BorderColor);
   --pf-v6-c-form-control--after--BorderWidth: var(--pf-v6-c-form-control--m-error--after--BorderWidth);
 }
+.pf-v6-c-form-control.pf-m-error > input {
+  padding-inline-end: var(--pf-v6-c-form-control--m-error--PaddingInlineEnd, var(--pf-v6-c-form-control__input--m-error--PaddingInlineEnd));
+}
 .pf-v6-c-form-control:hover {
   --pf-v6-c-form-control--after--BorderColor: var(--pf-v6-c-form-control--hover--after--BorderColor);
   --pf-v6-c-form-control--after--BorderWidth: var(--pf-v6-c-form-control--hover--after--BorderWidth);
+}
+.pf-v6-c-form-control:has(select) {
+  --pf-v6-c-form-control--PaddingBlockStart: var(--pf-v6-c-form-control__select--PaddingBlockStart);
+  --pf-v6-c-form-control--PaddingBlockEnd: var(--pf-v6-c-form-control__select--PaddingBlockEnd);
+  --pf-v6-c-form-control--PaddingInlineStart: var(--pf-v6-c-form-control__select--PaddingInlineStart);
+  --pf-v6-c-form-control--PaddingInlineEnd: calc(var(--pf-v6-c-form-control__select--PaddingInlineEnd) + var(--pf-v6-c-form-control__icon--FontSize));
+  background-color: var(--pf-v6-c-form-control--BackgroundColor);
+}
+@-moz-document url-prefix() {
+  .pf-v6-c-form-control:has(select) {
+    --pf-v6-c-form-control--PaddingInlineEnd: calc(var(--pf-v6-c-form-control__select--PaddingInlineEnd) - 1px);
+    --pf-v6-c-form-control--PaddingInlineStart: calc(var(--pf-v6-c-form-control__select--PaddingInlineStart) - 4px);
+  }
 }
 
 .pf-v6-c-helper-text {
@@ -663,6 +707,8 @@ button) {
   --pf-v6-c-helper-text__item-text--FontWeight: var(--pf-t--global--font--weight--body--default);
   --pf-v6-c-helper-text__item-icon--m-error--Color: var(--pf-t--global--icon--color--status--danger--default);
   --pf-v6-c-helper-text__item-text--m-error--FontWeight: var(--pf-t--global--font--weight--body--bold);
+  --pf-v6-c-helper-text__item--m-error--TransitionDuration--Opacity: var(--pf-t--global--motion--duration--fade--default);
+  --pf-v6-c-helper-text__item--m-error--TransitionTimingFunction--Opacity: var(--pf-t--global--motion--timing-function--default);
   --pf-v6-c-helper-text__item-icon--MarginInlineEnd: var(--pf-t--global--spacer--xs);
 }
 
@@ -679,6 +725,17 @@ button) {
 .pf-v6-c-helper-text__item.pf-m-error {
   --pf-v6-c-helper-text__item-text--FontWeight: var(--pf-v6-c-helper-text__item-text--m-error--FontWeight);
   --pf-v6-c-helper-text__item-icon--Color: var(--pf-v6-c-helper-text__item-icon--m-error--Color);
+  animation-name: pf-v6-c-helper-text-item-fade-in;
+  animation-duration: var(--pf-v6-c-helper-text__item--m-error--TransitionDuration--Opacity);
+  animation-timing-function: var(--pf-v6-c-helper-text__item--m-error--TransitionTimingFunction--Opacity);
+}
+@keyframes pf-v6-c-helper-text-item-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .pf-v6-c-helper-text__item-icon {

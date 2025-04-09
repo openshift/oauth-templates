@@ -47,12 +47,12 @@ body) {
 
 :where(a) {
   color: var(--pf-t--global--text--color--link--default);
-  text-decoration: var(--pf-t--global--text-decoration--link--line--default);
+  text-decoration-line: var(--pf-t--global--text-decoration--link--line--default);
 }
 
 :where(a:hover, a:focus) {
   color: var(--pf-t--global--text--color--link--hover);
-  text-decoration: var(--pf-t--global--text-decoration--link--line--hover);
+  text-decoration-line: var(--pf-t--global--text-decoration--link--line--hover);
 }
 
 :where(a) {
@@ -89,6 +89,7 @@ body) {
   --pf-t--color--red-orange--60: #b1380b;
   --pf-t--color--white: #ffffff;
   --pf-t--global--border--radius--400: 24px;
+  --pf-t--global--duration--200: 200ms;
   --pf-t--global--font--family--100: "Red Hat Text", "RedHatText", "Noto Sans Arabic", "Noto Sans Hebrew", "Noto Sans JP", "Noto Sans KR", "Noto Sans Malayalam", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", Helvetica, Arial, sans-serif;
   --pf-t--global--font--line-height--200: 1.5;
   --pf-t--global--font--size--100: 0.75rem;
@@ -103,6 +104,7 @@ body) {
   --pf-t--global--spacer--600: 3rem;
   --pf-t--global--spacer--700: 4rem;
   --pf-t--global--text-decoration--line--200: underline;
+  --pf-t--global--timing-function--200: cubic-bezier(.4, 0, .2, 1);
   --pf-t--global--background--color--100: var(--pf-t--color--white);
   --pf-t--global--background--color--200: var(--pf-t--color--gray--10);
   --pf-t--global--border--color--100: var(--pf-t--color--gray--30);
@@ -115,6 +117,8 @@ body) {
   --pf-t--global--font--weight--body--bold: var(--pf-t--global--font--weight--200);
   --pf-t--global--font--weight--body--default: var(--pf-t--global--font--weight--100);
   --pf-t--global--icon--color--100: var(--pf-t--color--gray--90);
+  --pf-t--global--motion--duration--md: var(--pf-t--global--duration--200);
+  --pf-t--global--motion--timing-function--default: var(--pf-t--global--timing-function--200);
   --pf-t--global--spacer--2xl: var(--pf-t--global--spacer--600);
   --pf-t--global--spacer--3xl: var(--pf-t--global--spacer--700);
   --pf-t--global--spacer--lg: var(--pf-t--global--spacer--400);
@@ -134,6 +138,7 @@ body) {
   --pf-t--global--font--size--body--default: var(--pf-t--global--font--size--sm);
   --pf-t--global--font--size--body--sm: var(--pf-t--global--font--size--xs);
   --pf-t--global--icon--color--regular: var(--pf-t--global--icon--color--100);
+  --pf-t--global--motion--duration--fade--default: var(--pf-t--global--motion--duration--md);
   --pf-t--global--text--color--link--default: var(--pf-t--global--text--color--link--100);
   --pf-t--global--text--color--link--hover: var(--pf-t--global--text--color--link--200);
   --pf-t--global--text--color--regular: var(--pf-t--global--text--color--100);
@@ -260,6 +265,8 @@ body) {
   --pf-v6-c-helper-text__item-text--FontWeight: var(--pf-t--global--font--weight--body--default);
   --pf-v6-c-helper-text__item-icon--m-error--Color: var(--pf-t--global--icon--color--status--danger--default);
   --pf-v6-c-helper-text__item-text--m-error--FontWeight: var(--pf-t--global--font--weight--body--bold);
+  --pf-v6-c-helper-text__item--m-error--TransitionDuration--Opacity: var(--pf-t--global--motion--duration--fade--default);
+  --pf-v6-c-helper-text__item--m-error--TransitionTimingFunction--Opacity: var(--pf-t--global--motion--timing-function--default);
   --pf-v6-c-helper-text__item-icon--MarginInlineEnd: var(--pf-t--global--spacer--xs);
 }
 
@@ -276,6 +283,17 @@ body) {
 .pf-v6-c-helper-text__item.pf-m-error {
   --pf-v6-c-helper-text__item-text--FontWeight: var(--pf-v6-c-helper-text__item-text--m-error--FontWeight);
   --pf-v6-c-helper-text__item-icon--Color: var(--pf-v6-c-helper-text__item-icon--m-error--Color);
+  animation-name: pf-v6-c-helper-text-item-fade-in;
+  animation-duration: var(--pf-v6-c-helper-text__item--m-error--TransitionDuration--Opacity);
+  animation-timing-function: var(--pf-v6-c-helper-text__item--m-error--TransitionTimingFunction--Opacity);
+}
+@keyframes pf-v6-c-helper-text-item-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .pf-v6-c-helper-text__item-icon {

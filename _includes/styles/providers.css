@@ -59,12 +59,12 @@ body) {
 
 :where(a) {
   color: var(--pf-t--global--text--color--link--default);
-  text-decoration: var(--pf-t--global--text-decoration--link--line--default);
+  text-decoration-line: var(--pf-t--global--text-decoration--link--line--default);
 }
 
 :where(a:hover, a:focus) {
   color: var(--pf-t--global--text--color--link--hover);
-  text-decoration: var(--pf-t--global--text-decoration--link--line--hover);
+  text-decoration-line: var(--pf-t--global--text-decoration--link--line--hover);
 }
 
 :where(a) {
@@ -92,6 +92,7 @@ body) {
   --pf-t--color--blue--30: #92c5f9;
   --pf-t--color--blue--50: #0066cc;
   --pf-t--color--blue--60: #004d99;
+  --pf-t--color--gray--10: #f2f2f2;
   --pf-t--color--gray--30: #c7c7c7;
   --pf-t--color--gray--40: #a3a3a3;
   --pf-t--color--gray--60: #4d4d4d;
@@ -322,6 +323,7 @@ body) {
   --pf-v6-c-button--BorderRadius: var(--pf-t--global--border--radius--pill);
   --pf-v6-c-button--TextDecorationLine: none;
   --pf-v6-c-button--TextDecorationStyle: none;
+  --pf-v6-c-button--TextDecorationColor: currentcolor;
   --pf-v6-c-button--TransitionDuration: var(--pf-t--global--motion--duration--fade--default);
   --pf-v6-c-button--TransitionTimingFunction: var(--pf-t--global--motion--timing-function--default);
   --pf-v6-c-button--TransitionProperty: color, background-color, border-width, border-color, padding;
@@ -330,6 +332,7 @@ body) {
   --pf-v6-c-button--hover--BorderWidth: var(--pf-t--global--border--width--action--hover);
   --pf-v6-c-button--hover--TextDecorationLine: none;
   --pf-v6-c-button--hover--TextDecorationStyle: none;
+  --pf-v6-c-button--hover--TextDecorationColor: currentcolor;
   --pf-v6-c-button--m-primary--Color: var(--pf-t--global--text--color--on-brand--default);
   --pf-v6-c-button--m-primary--BackgroundColor: var(--pf-t--global--color--brand--default);
   --pf-v6-c-button--m-primary--hover--Color: var(--pf-t--global--text--color--on-brand--hover);
@@ -341,6 +344,7 @@ body) {
   --pf-v6-c-button--m-secondary--hover--BorderColor: var(--pf-t--global--border--color--brand--hover);
   --pf-v6-c-button--disabled--Color: var(--pf-t--global--text--color--on-disabled);
   --pf-v6-c-button--disabled--BackgroundColor: var(--pf-t--global--background--color--disabled--default);
+  --pf-v6-c-button--disabled--TextDecorationColor: currentcolor;
   --pf-v6-c-button--m-block--Display: flex;
   --pf-v6-c-button--m-block--Width: 100%;
 }
@@ -361,7 +365,9 @@ body) {
   line-height: var(--pf-v6-c-button--LineHeight, inherit);
   color: var(--pf-v6-c-button--Color);
   text-align: center;
-  text-decoration: var(--pf-v6-c-button--TextDecorationLine) var(--pf-v6-c-button--TextDecorationStyle);
+  text-decoration-line: var(--pf-v6-c-button--TextDecorationLine);
+  text-decoration-style: var(--pf-v6-c-button--TextDecorationStyle);
+  text-decoration-color: var(--pf-v6-c-button--TextDecorationColor);
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
@@ -407,13 +413,16 @@ body) {
   --pf-v6-c-button--BackgroundColor: var(--pf-v6-c-button--hover--BackgroundColor);
   --pf-v6-c-button--BorderColor: var(--pf-v6-c-button--hover--BorderColor);
   --pf-v6-c-button--BorderWidth: var(--pf-v6-c-button--hover--BorderWidth);
-  text-decoration: var(--pf-v6-c-button--hover--TextDecorationLine) var(--pf-v6-c-button--hover--TextDecorationStyle);
+  text-decoration-line: var(--pf-v6-c-button--hover--TextDecorationLine);
+  text-decoration-style: var(--pf-v6-c-button--hover--TextDecorationStyle);
+  text-decoration-color: var(--pf-v6-c-button--hover--TextDecorationColor);
 }
 .pf-v6-c-button:disabled {
   pointer-events: none;
 }
 .pf-v6-c-button:disabled {
   color: var(--pf-v6-c-button--disabled--Color);
+  text-decoration-color: var(--pf-v6-c-button--disabled--TextDecorationColor);
   background-color: var(--pf-v6-c-button--disabled--BackgroundColor);
 }
 .pf-v6-c-button:disabled::after {
