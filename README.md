@@ -2,8 +2,6 @@
 
 The upstream source for the login, errors, and providers HTML templates for OpenShift.
 
-View the templates at https://openshift.github.io/oauth-templates/.
-
 ## Development
 
 1. Install [Jekyll](https://jekyllrb.com/docs/installation/) and run `bundle install`.
@@ -98,3 +96,12 @@ To undo the changes for testing:
 
 1. Resume rollouts of `cluster-version-operator` in the web console by visiting `https://<HOSTNAME>/k8s/ns/openshift-cluster-version/deployments/cluster-version-operator` via `Actions > Resume Rollouts` and scale pods back to one using the pod donut controls.
 1. Visit `https://<HOSTNAME>/k8s/ns/openshift-authentication-operator/deployments/authentication-operator` and use the pod donut controls to set pods to one.
+
+### Red Hat OpenShift Dedicated and Red Hat OpenShift Service on AWS (ROSA)
+
+The OpenShift Dedicated and OpenShift Service on AWS branded templates also take advantage of the override mechanism. Note that the `provider` template has a special override for these brands: the `kube:admin` provider is hidden.
+
+To update the templates used by OpenShift Dedicated and OpenShift Service on AWS, follow these steps:
+
+1. Run `yarn build-jekyll` to generate the HTML templates.
+1. Follow the instructions on the [managed-cluster-config](https://github.com/openshift/managed-cluster-config) repository for [OpenShift Dedicated](https://github.com/openshift/managed-cluster-config/tree/master/source/html/osd) and [OpenShift Service on AWS](https://github.com/openshift/managed-cluster-config/tree/master/source/html/rosa) to update the templates.

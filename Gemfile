@@ -30,3 +30,7 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 # Fixes bundle exec jekyll serve on Ruby 3.0.0 and newer
 gem "webrick", "~> 1.8"
+
+# Formerly part of the Ruby standard library, now a gem.
+gem 'csv'
+gem 'base64'
