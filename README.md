@@ -103,5 +103,8 @@ The OpenShift Dedicated and OpenShift Service on AWS branded templates also take
 
 To update the templates used by OpenShift Dedicated and OpenShift Service on AWS, follow these steps:
 
-1. Run `yarn build-jekyll` to generate the HTML templates.
+1. Install [Jekyll](https://jekyllrb.com/docs/installation/) and run `bundle install`.
+1. Install [Yarn](https://yarnpkg.com/lang/en/docs/install) and run `yarn install`.
+1. Run `yarn build-jekyll` to generate the HTML templates. The
+1. You can find the templates for OpenShift Service on AWS and OpenShift Dedicated in the `_site/rosa` and `_site/od` directories respectively.
 1. Follow the instructions on the [managed-cluster-config](https://github.com/openshift/managed-cluster-config) repository for [OpenShift Dedicated](https://github.com/openshift/managed-cluster-config/tree/master/source/html/osd) and [OpenShift Service on AWS](https://github.com/openshift/managed-cluster-config/tree/master/source/html/rosa) to update the templates.
