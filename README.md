@@ -2,8 +2,6 @@
 
 The upstream source for the login, errors, and providers HTML templates for OpenShift.
 
-View the templates at https://openshift.github.io/oauth-templates/.
-
 ## Development
 
 1. Install [Jekyll](https://jekyllrb.com/docs/installation/) and run `bundle install`.
@@ -105,4 +103,5 @@ The OpenShift Dedicated and OpenShift Service on AWS branded templates also take
 
 To update the templates used by OpenShift Dedicated and OpenShift Service on AWS, follow these steps:
 
+1. Run `yarn build-jekyll` to generate the HTML templates.
 1. Follow the instructions on the [managed-cluster-config](https://github.com/openshift/managed-cluster-config) repository for [OpenShift Dedicated](https://github.com/openshift/managed-cluster-config/tree/master/source/html/osd) and [OpenShift Service on AWS](https://github.com/openshift/managed-cluster-config/tree/master/source/html/rosa) to update the templates.
