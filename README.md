@@ -4,13 +4,13 @@ The upstream source for the login, errors, and providers HTML templates for Open
 
 ## Development
 
-1. Install [Yarn](https://yarnpkg.com/lang/en/docs/install) and run `yarn install`.
+1. Install [Corepack](https://github.com/nodejs/corepack) and run `yarn install`.
    - Note that certain dependencies require Node.js 20+. You can install [n](https://www.npmjs.com/package/n) to switch between node versions.
 1. Run `yarn serve`
 
 ### Updating PatternFly
 
-1. Install [Corepack](https://www.npmjs.com/package/corepack) and run `yarn install`.
+1. Install [Corepack](https://github.com/nodejs/corepack) and run `yarn install`.
 1. Run `yarn upgrade @patternfly/patternfly`.
 1. Verify there are no regressions by running `yarn serve`.
 1. Commit the changes.
@@ -96,7 +96,7 @@ The OpenShift Dedicated and OpenShift Service on AWS branded templates also take
 
 To update the templates used by OpenShift Dedicated and OpenShift Service on AWS, follow these steps:
 
-1. Install [Yarn](https://yarnpkg.com/lang/en/docs/install) and run `yarn install`.
+1. Install [Corepack](https://github.com/nodejs/corepack) and run `yarn install`.
 1. Run `yarn build` to generate the HTML templates.
 1. You can find the templates for OpenShift Service on AWS and OpenShift Dedicated in the `_site/rosa` and `_site/od` directories respectively.
 1. Follow the instructions on the [managed-cluster-config](https://github.com/openshift/managed-cluster-config) repository for [OpenShift Dedicated](https://github.com/openshift/managed-cluster-config/tree/master/source/html/osd) and [OpenShift Service on AWS](https://github.com/openshift/managed-cluster-config/tree/master/source/html/rosa) to update the templates.
