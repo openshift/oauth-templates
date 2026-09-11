@@ -11,6 +11,29 @@ const brands = {
     okd: { label: 'okd', name: 'OKD' },
 };
 
+function* shortNameGen() {
+    const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    for (const c of chars) yield `--${c}`;
+    for (const c1 of chars) for (const c2 of chars) yield `--${c1}${c2}`;
+}
+
+/**
+ * Renames CSS variables in a string, replacing them with shorter names.
+ *
+ * @param {string} css - The CSS string containing variables to rename.
+ * @param {string} htmlOutsideStyle - The HTML string outside of the <style> tag, used to determine which variables are used in the HTML.
+ *
+ * @returns {string} The CSS string with renamed variables.
+ */
+const renameVars = (css, htmlOutsideStyle) => {
+    const varRe = /--[\w-]+/g;
+    const htmlVars = new Set(htmlOutsideStyle.match(varRe) ?? []);
+    const cssVars = [...new Set(css.match(varRe) ?? [])].filter(v => !htmlVars.has(v));
+    const gen = shortNameGen();
+    const map = new Map(cssVars.map(v => [v, gen.next().value]));
+    return css.replace(varRe, v => map.get(v) ?? v);
+}
+
 export default defineConfig(config => {
     config.setIncludesDirectory('_includes');
     config.setLayoutsDirectory('_layouts');
@@ -69,7 +92,9 @@ export default defineConfig(config => {
                 },
             });
 
-            styleNode.content = [result.css];
+            // Strip the style tag content from the HTML so we can find vars used outside it
+            const htmlOutsideStyle = content.replace(/<style[^>]*id="c"[^>]*>[\s\S]*?<\/style>/i, '');
+            styleNode.content = [renameVars(result.css, htmlOutsideStyle)];
         }]).process(content);
 
         return html;
