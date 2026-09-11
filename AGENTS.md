@@ -9,25 +9,22 @@ This repository contains the upstream source for the login, errors, and provider
 ## Development Commands
 
 - **Setup**: `bundle install && yarn install`
-- **Build**: `yarn build-jekyll`
-- **Dev server**: `yarn serve-jekyll`
-- **Generate styles**: `yarn generate-styles` (run after using new PatternFly classes)
+- **Build**: `yarn build`
+- **Dev server**: `yarn serve`
 - **Generate branding secret**: `yarn generate-branding-secret`, used to update https://github.com/openshift/cluster-authentication-operator
 
 ## Directory Structure
 
-- `_layouts/` - Jekyll layout templates (base, errors, login, providers)
+- `_layouts/` - Liquid layout templates (base, errors, login, providers)
 - `_includes/` - Reusable HTML partials (logos, favicons, styles)
 - `_okd/`, `_rho/`, `_ocp/`, `_od/`, `_rosa/` - Brand-specific template collections
-- `_includes/styles/` - Generated CSS (auto-generated, commit to git)
 - `_site/` - Generated static site (do NOT commit)
-- `generate-styles.mjs` - PurgeCSS script for CSS optimization
 
 ## Code Conventions
 
 ### HTML Templates
 
-- Use Jekyll's Liquid templating syntax: `{% include %}` for partials, `{{ variable }}` for data
+- Use Liquid templating syntax: `{% include %}` for partials, `{{ variable }}` for data
 - Keep brand-specific content in collection directories (`_okd/`, `_rho/`, `_ocp/`, `_od/`, `_rosa/`)
 - Share common structure in `_layouts/` and `_includes/`
 - Follow PatternFly design system patterns
@@ -37,8 +34,6 @@ This repository contains the upstream source for the login, errors, and provider
 
 - Use PatternFly utility classes whenever possible
 - Avoid custom CSS; prefer PatternFly components
-- CSS is auto-generated via PurgeCSS - do NOT manually edit files in `_includes/styles/`
-- After adding new PatternFly classes to HTML, run `yarn generate-styles`
 
 ## Common Patterns
 
@@ -50,19 +45,13 @@ This repository contains the upstream source for the login, errors, and provider
 - Configure new brands in `_config.yml` collections
 - **Special case**: ROSA and OD hide the `kubeadmin` provider in `providers.html`
 
-### Jekyll Workflow
+### Eleventy Workflow
+
+Refer to https://www.11ty.dev/docs/ for more information
 
 - Layouts in `_layouts/` define page structure
 - Brand collections inherit from layouts via front matter
-- Shared components referenced via `{% include path.html %}`
-- Site config accessed via `{{ site.variable }}`, page data via `{{ page.variable }}`
-
-### CSS Generation
-
-- PurgeCSS removes unused CSS from PatternFly automatically
-- Safelist defined in `generate-styles.mjs` for dynamic classes
-- Font faces removed (embedded separately)
-- Always commit generated CSS to git
+- Shared components referenced via `{% include 'path.html' %}`
 
 ## Deployment
 

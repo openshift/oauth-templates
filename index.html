@@ -2,16 +2,17 @@
 layout: index
 ---
 
-<h1 class="pf-v6-c-title pf-m-h1 pf-m-page-title">{{site.title}}</h1>
-{% for collection in site.collections %}
-  {% if collection.label != "posts" %}
-  <h2 class="pf-v6-c-title pf-m-h2">{{ collection.name }}</h2>
+<main class="pf-v6-u-p-md">
+  <h1 class="pf-v6-c-title pf-m-h1 pf-m-page-title">OAuth Templates</h1>
+  {% for brand in brands %}
+  {% assign brand_items = collections[brand.label] %}
+  <h2 class="pf-v6-c-title pf-m-h2">{{ brand.name }}</h2>
   <ul class="pf-v6-c-list">
-    {% for doc in collection.docs %}
+    {% for item in brand_items %}
     <li>
-      <a href="{{ doc.url | remove_first:'/' }}">{{ doc.layout }}</a>
+      <a href="{{ item.url }}">{{ item.data.layout }}</a>
     </li>
     {% endfor %}
   </ul>
-  {% endif %}
-{% endfor %}
+  {% endfor %}
+</main>

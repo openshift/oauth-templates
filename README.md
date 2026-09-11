@@ -4,22 +4,15 @@ The upstream source for the login, errors, and providers HTML templates for Open
 
 ## Development
 
-1. Install [Jekyll](https://jekyllrb.com/docs/installation/) and run `bundle install`.
 1. Install [Yarn](https://yarnpkg.com/lang/en/docs/install) and run `yarn install`.
    - Note that certain dependencies require Node.js 20+. You can install [n](https://www.npmjs.com/package/n) to switch between node versions.
-1. Run `yarn serve-jekyll`
-   - Note that `yarn generate-styles` will have to be run if there are new PatternFly classes added to the HTML.
+1. Run `yarn serve`
 
 ### Updating PatternFly
 
-Github Pages only runs in safe mode, preventing the usage of [symlinks](https://github.com/jekyll/jekyll/pull/6670), so PatternFly source must be manually copied to `_includes`.
-
-1. Install [Jekyll](https://jekyllrb.com/docs/installation/) and run `bundle install`.
-1. Install [Yarn](https://yarnpkg.com/lang/en/docs/install) and run `yarn install`.
+1. Install [Corepack](https://www.npmjs.com/package/corepack) and run `yarn install`.
 1. Run `yarn upgrade @patternfly/patternfly`.
-1. Run `yarn generate-styles`.
-1. Verify there are no regressions by running `yarn serve-jekyll`. Note that the CSS will not be automatically updated, so if you make changes to the HTML, you will need to run `yarn generate-styles` again.
-1. Make manual changes to the generated CSS if needed.
+1. Verify there are no regressions by running `yarn serve`.
 1. Commit the changes.
 
 ## Deployment
@@ -103,8 +96,7 @@ The OpenShift Dedicated and OpenShift Service on AWS branded templates also take
 
 To update the templates used by OpenShift Dedicated and OpenShift Service on AWS, follow these steps:
 
-1. Install [Jekyll](https://jekyllrb.com/docs/installation/) and run `bundle install`.
 1. Install [Yarn](https://yarnpkg.com/lang/en/docs/install) and run `yarn install`.
-1. Run `yarn build-jekyll` to generate the HTML templates.
+1. Run `yarn build` to generate the HTML templates.
 1. You can find the templates for OpenShift Service on AWS and OpenShift Dedicated in the `_site/rosa` and `_site/od` directories respectively.
 1. Follow the instructions on the [managed-cluster-config](https://github.com/openshift/managed-cluster-config) repository for [OpenShift Dedicated](https://github.com/openshift/managed-cluster-config/tree/master/source/html/osd) and [OpenShift Service on AWS](https://github.com/openshift/managed-cluster-config/tree/master/source/html/rosa) to update the templates.

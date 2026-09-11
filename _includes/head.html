@@ -1,6 +1,8 @@
 <head>
     <title>
-      {% if page.layout == 'errors' %}
+      {% if layout == '' %}
+        OpenShift OAuth Templates
+      {% elsif layout == 'errors' %}
         {% raw %}{{ .Locale.Error }}{% endraw %}
       {% else %}
         {% raw %}{{ .Locale.LogIn }}{% endraw %}
@@ -9,28 +11,18 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if collection.label == 'okd' %}
-      {%- include favicon-okd.html %}
+      {%- include "favicon-okd.html" %}
     {% else %}
-      {%- include favicon-openshift.html %}
+      {%- include "favicon-openshift.html" %}
     {% endif %}
 
+    {%- capture patternfly -%}
+      {% include "./node_modules/@patternfly/patternfly/patternfly.css" %}
+      {% include "./node_modules/@patternfly/patternfly/patternfly-addons.css" %}
+    {%- endcapture -%}
+
     {%- capture styles -%}
-      {% case page.layout %}
-
-      {% when 'errors' %}
-        {% include styles/errors.css %}
-      {% when 'login' %}
-        {% include styles/login.css %}
-
-        .error-placeholder {
-          min-height: 21px;
-        }
-      {% when 'providers' %}
-        {% include styles/providers.css %}
-
-      {% endcase %}
-
-      {% include fonts.scss %}
+      {% include "fonts.scss" %}
 
       {% if collection.label != 'okd' %}
       .pf-v6-c-background-image {
@@ -71,7 +63,8 @@
         }
       }
     {%- endcapture -%}
-    <style>
-      {{ styles | scssify }}
+    <style id="c">
+      {{ patternfly | removeFontFace }}
+      {{ styles }}
     </style>
   </head>

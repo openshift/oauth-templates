@@ -2,8 +2,6 @@
 layout: base
 ---
 
-{%- include collection.html -%}
-
 {% raw %}<main class="pf-v6-c-login__main">
   <header class="pf-v6-c-login__main-header">
     <h1 class="pf-v6-c-title pf-m-3xl">{{ .Locale.LogInToYourAccount }}</h1>
@@ -13,7 +11,7 @@ layout: base
       <input type="hidden" name="{{ .Names.Then }}" value="{{ .Values.Then }}">
       <input type="hidden" name="{{ .Names.CSRF }}" value="{{ .Values.CSRF }}">
       <div class="pf-v6-c-form__helper-text" aria-live="polite">
-        <div class="pf-v6-c-helper-text error-placeholder">
+        <div class="pf-v6-c-helper-text" style="min-height: 21px;">
           {{ if .Error }}
           <div class="pf-v6-c-helper-text__item pf-m-error" id="-helper">
             <span class="pf-v6-c-helper-text__item-icon">
