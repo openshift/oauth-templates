@@ -10,7 +10,7 @@
     "clean": "rm -rf _site",
     "build": "yarn clean && eleventy",
     "serve": "yarn clean && eleventy --serve",
-    "generate-branding-secret": "yarn rebuild && rm -f branding-secret.yaml && node generate-branding-secret.mjs rho"
+    "generate-branding-secret": "yarn rebuild && rm -f branding-secret.yaml && node generate-branding-secret.js rho"
   },
   "devDependencies": {
     "11ty.ts": "^0.0.7",
