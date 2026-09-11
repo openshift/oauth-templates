@@ -175,10 +175,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@patternfly/patternfly@^6.2.0":
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-6.2.0.tgz#580aa7c5a8fa363c77fa2666ba543ac12ee3f7c2"
-  integrity sha512-IfNC66MW8pyD3MHqq1Ff8BiRV7Aw0ySQd9TpmNAW8hx5Q1C2YiZWiqyGrhF2Oau/605VZCSOUlG8/XmfMiKVQQ==
+"@patternfly/patternfly@^6.6.1":
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/@patternfly/patternfly/-/patternfly-6.6.1.tgz#0b2022ba08f4821b255bfebe0da491cdab87ccbd"
+  integrity sha512-8P9C1TmFk5y5s2/1XVjmP9JmSyDXDiNBwPZewhPizULtqlaRu+Evljx/X1HTSFrCNY0qgI1uDKy+NXiorIniyA==
 
 "@sindresorhus/slugify@^2.2.1":
   version "2.2.1"

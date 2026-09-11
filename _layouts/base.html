@@ -10,16 +10,20 @@
           {% include "logos.html" %}
         </header>
         {{ content }}
+      </div>
     </div>
-  </div>
-  <script>
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.classList = "pf-v6-theme-dark";
-    }
 
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-        document.documentElement.classList.toggle("pf-v6-theme-dark", event.matches);
-    });
-  </script>
-</body>
+    <script>
+      const updateTheme = () => {
+        document.documentElement.classList.toggle(
+          "pf-v6-theme-dark",
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+        );
+      };
+
+      updateTheme();
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
+    </script>
+  </body>
 </html>
