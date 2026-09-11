@@ -1,7 +1,6 @@
 _site
 node_modules
 .DS_Store
-branding-secret.yaml
 
 # Yarn v4 (Berry)
 .yarn/*
