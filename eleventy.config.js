@@ -1,7 +1,8 @@
 import { defineConfig } from '11ty.ts';
 import { minify } from 'html-minifier-next';
-import { PurgeCSS } from 'purgecss';
+import fs from 'node:fs';
 import posthtml from 'posthtml';
+import { PurgeCSS } from 'purgecss';
 
 const brands = {
     ocp: { label: 'ocp', name: 'Red Hat OpenShift Container Platform' },
@@ -34,10 +35,35 @@ const renameVars = (css, htmlOutsideStyle) => {
     return css.replace(varRe, v => map.get(v) ?? v);
 }
 
+/**
+ * Writes a branding secret file to _site/{brand}/branding-secret.yaml
+ *
+ * @param {string} brand - The brand for which to generate the branding secret.
+ * @param {string} login - The login.html content.
+ * @param {string} providers - The providers.html content.
+ * @param {string} errors - The errors.html content.
+ */
+const generateBrandingSecret = (brand, login, providers, errors) => {
+    fs.writeFileSync(`./_site/_${brand}/branding-secret.yaml`,
+        `apiVersion: v1
+kind: Secret
+metadata:
+  namespace: openshift-authentication
+  name: v4-0-config-system-ocp-branding-template
+data:
+  login.html: ${Buffer.from(login).toString('base64')}
+  providers.html: ${Buffer.from(providers).toString('base64')}
+  errors.html: ${Buffer.from(errors).toString('base64')}
+`);
+}
+
 export default defineConfig(config => {
     config.setIncludesDirectory('_includes');
     config.setLayoutsDirectory('_layouts');
     config.setOutputDirectory('_site');
+
+    // Markdown only used for repo documentation
+    config.ignores.add('*.md')
 
     // Removes all font faces rules from a string containing CSS
     // (since we embed the fonts directly in a different file)
@@ -82,14 +108,6 @@ export default defineConfig(config => {
                 css: [{ raw: css }],
                 keyframes: true,
                 variables: true,
-                safelist: {
-                    variables: [
-                        '--pf-t--global--background--color--secondary--default',
-                        '--pf-t--color--gray--10',
-                        '--pf-t--global--background--color--200',
-                        '--pf-t--global--dark--background--color--100'
-                    ]
-                },
             });
 
             // Strip the style tag content from the HTML so we can find vars used outside it
@@ -116,6 +134,16 @@ export default defineConfig(config => {
         }
     });
 
-    // Markdown only used for repo documentation
-    config.ignores.add('*.md')
+    // Generate branding secrets
+    config.on(
+        "eleventy.after",
+        async ({ results }) => {
+            for (const brand of Object.keys(brands)) {
+                const login = results.filter(r => r.outputPath.includes(`_${brand}/login/index.html`))[0].content;
+                const providers = results.filter(r => r.outputPath.includes(`_${brand}/providers/index.html`))[0].content;
+                const errors = results.filter(r => r.outputPath.includes(`_${brand}/errors/index.html`))[0].content;
+
+                generateBrandingSecret(brand, login, providers, errors);
+            }
+        });
 });

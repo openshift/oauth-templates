@@ -65,7 +65,7 @@ To undo the changes for testing:
 
 The RHO branded templates take advantage of the override mechanism by providing customized templates via secrets via the following method:
 
-1. Copy the output from `yarn generate-branding-secret` to https://github.com/openshift/cluster-authentication-operator/blob/master/bindata/oauth-openshift/branding-secret.yaml.
+1. Copy the generated branding secret from `_site/_rho/branding-secret.yaml` to https://github.com/openshift/cluster-authentication-operator/blob/master/bindata/oauth-openshift/branding-secret.yaml.
 1. Submit a pull request to https://github.com/openshift/cluster-authentication-operator containing the copied changes.
 
 To test the changes:
