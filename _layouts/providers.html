@@ -11,14 +11,14 @@ layout: base
     <ul>
       {{ $logInWith := .Locale.LogInWith }}
       {{ range $provider := .Providers }}{% endraw %}
-      {% if page.noKubeAdmin %}{% raw %}{{ if ne $provider.Name "kube:admin" }}{% endraw %}{% endif %}
+      {% if noKubeAdmin %}{% raw %}{{ if ne $provider.Name "kube:admin" }}{% endraw %}{% endif %}
       {% raw %}
       <li class="pf-v6-u-pt-lg">
         <a href="{{$provider.URL}}" class="pf-v6-c-button pf-m-secondary pf-m-block"
           title="{{ $logInWith }} {{$provider.Name}}">{{$provider.Name}}</a>
       </li>
       {% endraw %}
-      {% if page.noKubeAdmin %}{% raw %}{{ end }}{% endraw %}{% endif %}
+      {% if noKubeAdmin %}{% raw %}{{ end }}{% endraw %}{% endif %}
       {% raw %}
       {{ end }}
     </ul>

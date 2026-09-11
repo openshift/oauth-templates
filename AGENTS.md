@@ -8,7 +8,7 @@ This repository contains the upstream source for the login, errors, and provider
 
 ## Development Commands
 
-- **Setup**: `bundle install && yarn install`
+- **Setup**: `yarn install`
 - **Build**: `yarn build`
 - **Dev server**: `yarn serve`
 - **Generate branding secret**: `yarn generate-branding-secret`, used to update https://github.com/openshift/cluster-authentication-operator
